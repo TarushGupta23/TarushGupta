@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500&display=swap');
+* {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-background: #211f9c;
+
+    --accent-1: #ff621f;
+    --accent-1--dull: #BF4B19;
+    --accent-2: #fff;
+    --accent-2-dull: #8a97b7;
+    --accent-3: #1FC9FF;
+    --accent-3-dull: #317C94;
+
+    --font-slab: 'DM Serif Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+body {
+    padding-left: 8vw; padding-right: 8vw;
+    color: white;
+    min-height: 100vh;
+    background: linear-gradient(135deg,  black, var(--primary-background));
+}
