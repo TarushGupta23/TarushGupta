@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 :root {
-    --primary-background: #211f9c;
-
     --accent-1: #ff621f;
     --accent-1--dull: #BF4B19;
     --accent-2: #fff;
@@ -20,5 +18,5 @@ body {
     padding-left: 8vw; padding-right: 8vw;
     color: white;
     min-height: 100vh;
-    background: linear-gradient(135deg,  black, var(--primary-background));
+    background-color: black;
 }
