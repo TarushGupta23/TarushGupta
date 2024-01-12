@@ -1,33 +1,25 @@
 <%- include("partial/header.ejs") %>
+
 <!-- ===========================================
         hero section
 =========================================== -->
-    <main>
-        <section class="section section-hero">
-            <div class="container grid grid-two-col">
-                <!-- data -->
-                <div class="section-hero-data">
-                    <h1 class="hero-heading">Tarush Gupta</h1>
-                    <h4 class="hero-top-data"><strong>Java</strong>, <strong>Android</strong> and <strong>Web</strong> Developer</h4>
-                    <p class="hero-para">A passionate IT student at NIT Jalandhar. I find immense joy in the artistic side of coding, witnessing the transformation of lines of code into visually stunning apps, websites and machines.</p>
-                    <div>
-                        <a href="" class="btn btn-hireme">Hire me</a>
-                    </div>
-                </div>
-                <!-- image -->
-                <div class="section-hero-image">
-                    <div class="hero-monitor">
-                        <div class="monitor-top">
-                            <div class="monitor-screen">
-                                <img src="images/hero.jpeg" alt="profile image" class="hero-image">
-                            </div>
-                        </div>
-                        <div class="monitor-bottom">
-                            <div class="monitor-logo"></div>
-                        </div>
-                    </div>
+
+<main>
+    <section class="section section-hero">
+        <div class="container grid grid-two-col">
+            <!-- data -->
+            <div class="section-hero-data">
+                <h1 class="hero-heading text-fade-in">Tarush Gupta</h1>
+                <h4 class="hero-top-data"><strong>Android</strong> and <strong>Web</strong> Developer</h4>
+                <p class="hero-para">A passionate IT student at NIT Jalandhar. I find immense joy in the artistic side of coding, witnessing the transformation of lines of code into visually stunning apps, websites and machines.</p>
+                <div>
+                    <a href="" class="btn btn-hireme">Hire me</a>
                 </div>
             </div>
-        </section>
-    </main>
-<%- include("partial/footer.ejs") %>
+            <!-- image -->
+            <div class="section-hero-image">
+                <%- include("partial/heroSectionSvg.ejs") %>
+            </div>
+        </div>
+    </section>
+</main>
