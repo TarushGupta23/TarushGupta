@@ -1,0 +1,93 @@
+#journey-section {
+    margin-top: 26rem;
+}
+.journey-list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.journey-list li {
+    position: relative;
+    display: flex; 
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+}
+.journey-line {
+    position: absolute;
+    width: .2rem; height: 100%;
+    outline: none; border: none; border-radius: 100px;
+    background-image: linear-gradient(0deg, black, var(--accent), var(--accent), var(--accent), var(--accent));
+    left: 50%;
+    transform: translateX(-50%);
+}
+.journey-line span {
+    position: absolute;
+    top: 0; left: 50%;
+    width: 1rem; aspect-ratio: 1;
+    border-radius: 50%;
+    transform: translate(-50%, 0%);
+    background-color: var(--accent);
+}
+.journey-text, .journey-image {
+    padding: 1rem 0px;
+    flex: 1;
+}
+.journey-image img {
+    border-radius: .75rem;
+    width: 100%;
+}
+.journey-list li div {
+    display: flex; flex-direction: column;
+    color: white;
+}
+.journey-list li div:first-child {
+    align-items: end;
+    text-align: right;
+}
+.journey-list li:nth-child(2n+1) .journey-image span {
+    border-top-right-radius: 1rem !important;
+    border-top-left-radius: 0px;
+}
+
+.journey-text h3 {
+    color: var(--accent);
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+}
+.journey-dur {
+    color: var(--accent);
+    margin-bottom: .2rem;
+}
+.journey-image span {
+    background-color: white;
+    padding: .5rem;
+    border-radius: 1rem;
+    border-top-right-radius: 0px;
+    width: 70%;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes line-draw {
+    from {height: 0%;}
+    to {height: 100%;}
+}
+
+.journey-text *, .journey-image {
+    animation: appear ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 60%;
+}
+.journey-line {
+    animation: line-draw ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 60%;
+}
