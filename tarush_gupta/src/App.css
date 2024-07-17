@@ -13,9 +13,41 @@
   --white: white;
 }
 
-html {
+html, body {
   font-size: 16px;
+  overflow: hidden;
 }
 #root {
   width: 100vw; height: 100vh;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  background-color: #282c34;
+  gap: 2rem;
+  transition: all 1.2s ease-in;
+}
+.iconContainer {
+  display: flex; gap: 2rem;
+}
+.iconContainer img {
+  height: 5rem;
+  border: 1px solid red;
+}
+.loadingBar {
+  width: 60vw;
+  height: 0.5rem;
+  border-radius: 100px;
+  background-color: black;
+}
+.loadingBarInner {
+  width: 0%; height: 100%;
+  transition: all .1s ease;
+  background-color: white;
+}
+.container.hidden {
+  opacity: 0;
+  transform: translateY(100%);
 }
