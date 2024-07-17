@@ -1,0 +1,40 @@
+nav {
+    display: flex;
+    align-items: center; justify-content: center;
+    padding-top: .6rem;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center; align-items: center;
+    gap: .2rem;
+    padding: .4rem .5rem;
+    border-radius: 1000px;
+    border: 3px solid #89cff0;
+    background-color: rgba(0, 0, 0, 0.716);
+    overflow: hidden;
+    position: relative;
+    top: -100px;
+    transition: all .2s ease;
+}
+nav:hover ul { top: 0; }
+nav img { height: 2rem; width: 2rem; }
+nav ul li {
+    border-radius: 1000px;
+    display: flex;
+    align-items: center; justify-content: center;
+    width: 3.4rem; height: 3.4rem;
+    transition: all .1s ease;
+    cursor: pointer;
+}
+nav .bgrd {
+    position: absolute;
+    width: 100vw; height: 100vh;
+}
+nav ul li.active {
+    background-color: rgba(0, 0, 0, 0.453);
+    transform: none !important;
+}
+nav ul li:hover {
+    transform: scale(1.3);
+}
