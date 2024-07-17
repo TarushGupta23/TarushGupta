@@ -1,7 +1,0 @@
-#triangles span {
-    position: absolute;
-}
-
-#triangles * {
-    transition: all ease-out .3s;
-}

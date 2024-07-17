@@ -14,24 +14,8 @@
 }
 
 html {
-  font-size: 12px;
-  background-color: var(--accent);
-  animation: change-bgcol ease-in-out;
-  animation-timeline: view();
-  animation-range: entry 0% cover 100%;
+  font-size: 16px;
 }
-
-section {
-  padding: 0rem 15rem;
-  background-color: transparent;
-}
-ul {
-  list-style-type: none;
-}
-
-@keyframes change-bgcol {
-  0% {background-color: var(--accent);}
-  35% {background-color: var(--accent);}
-  40% {background-color: var(--black);}
-  100% {background-color: var(--black);}
+#root {
+  width: 100vw; height: 100vh;
 }
