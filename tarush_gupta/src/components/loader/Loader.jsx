@@ -5,25 +5,23 @@ import './loader.css'
 export default function Loader() {
     const { progress } = useProgress()
 
-    return <div className="loaderContainer">
-        <div className={progress == 100? "loadWrapper hidden":"loadWrapper"}>
-            <div className="loaderIconContainer">
-                <img src="/icons/mongodb.png" alt="icon1" />
-                <img src="/icons/express-js.webp" alt="icon2" />
-                <img src="/icons/react.png" alt="icon3" />
-                <img src="/icons/node.png" alt="icon4" />
-                <span></span>
-                <img src="/icons/android.png" alt="icon4" />
-                <img src="/icons/java.png" alt="icon4" />
-                <img src="/icons/firebase.png" alt="icon4" />
-                <img src="/icons/kotlin.png" alt="icon4" />
-            </div>
-            <div className="loadingBar">
-                <div className="loadingBarInner" style={{ width: `${progress.toFixed(2)}%` }}></div>
-            </div>
-            <h2 className="loadingText">
-                {progress.toFixed(2)}% loaded
-            </h2>
+    return <div className={progress === 100? "loadWrapper hidden":"loadWrapper"}>
+        <div className="loaderIconContainer">
+            <img src="/icons/loader/mongodb.png" alt="mongodb-icon" />
+            <img src="/icons/loader/express-js.webp" alt="express-js-icon" />
+            <img src="/icons/loader/react.png" alt="react-icon" />
+            <img src="/icons/loader/node.png" alt="node-icon" />
+            <span></span>
+            <img src="/icons/loader/android.png" alt="android-icon" />
+            <img src="/icons/loader/java.png" alt="java-icon" />
+            <img src="/icons/loader/firebase.png" alt="firebase-icon" />
+            <img src="/icons/loader/kotlin.png" alt="kotlin-icon" />
         </div>
+        <div className="loadingBar">
+            <div className="loadingBarInner" style={{ width: `${progress.toFixed(2)}%` }}></div>
+        </div>
+        <h2 className="loadingText">
+            {progress.toFixed(2)}% Loaded
+        </h2>
     </div>
 }

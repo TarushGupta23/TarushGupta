@@ -19,8 +19,6 @@
     //     };
     // }, []);
 
-    const moveAllAbove = 8.6
-    const moveAppearent = 4.6
     // ---------------------------------------------
 
     // const model = useGLTF('./models/Iphone.glb');

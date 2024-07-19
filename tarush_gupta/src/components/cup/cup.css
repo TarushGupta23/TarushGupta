@@ -1,0 +1,68 @@
+.cupContainer {
+    z-index: var(--html-z);
+    position: fixed;
+    width: 100vw; height: 100vh;
+    top: 0; left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
+    transition: all .4s ease-out;
+}
+.cupContainer.hidden {
+    transform: translate(-100%, 0%);
+}
+.cupWrapper {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 1rem;
+    color: white;
+    width: 60%; height: 100%;
+}
+.cupWrapper .name {
+    letter-spacing: .4rem;
+    font-size: 4rem;
+}
+.cupWrapper ul {
+    display: flex;
+    gap: 2rem;
+}
+.cupWrapper ul li {
+    padding: .6rem;
+    background-color: var(--secondary-transparent);
+    width: 150px;
+    display: flex; gap: .4rem;
+    align-items: center; justify-content: center;
+    border: 2px solid white;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.cupWrapper ul li img { 
+    height: 1.2rem; 
+    filter: brightness(1.8);
+}
+
+.cupWrapper ul li:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+.cupWrapper ul li:hover img { filter: brightness(1); }
+.scrollContainer {
+    display: flex; gap: .4rem;
+    align-items: center; justify-content: center;
+    width: 8rem;
+}
+#scroll-icon {
+    width: 2.2rem; height: 4rem;
+    border: 2px solid white;
+    border-radius: 1000px;
+    position: relative;
+    background-color: var(--secondary-transparent);
+}
+#scroll-icon span {
+    display: block;
+    position: absolute;
+    width: 100%; aspect-ratio: 1;
+    background-color: white;
+    border-radius: 100%;
+    left: 0;
+    /* animation: scrollAnim 2s infinite; */
+}
