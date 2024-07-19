@@ -19,7 +19,7 @@ const cameraPath = [{
     }, { 
     // laptop - https://www.flaticon.com/free-icon/pc_556813?term=computer&page=1&position=64&origin=tag&related_id=556813
         position: [1.935, -.73 + currentDisplacement, 14.82], 
-        rotation: [.06, -.05, 0], 
+        rotation: [-.06, -.05, 0], 
         fov: getFov(50) 
     }, { 
     // phone - https://www.flaticon.com/free-icon-font/mobile-notch_8034760?page=1&position=7&term=phone&origin=search&related_id=8034760
@@ -39,7 +39,7 @@ const cameraPath = [{
     }, { 
     // alexa - https://www.flaticon.com/free-icon-font/skill-user_15399295?term=chat&related_id=15399295
         position: [-10.025, 4.6-2.63, 6.97], 
-        otation: [-.10, -.74, -.11], 
+        rotation: [-.10, -.74, -.11], 
         fov: getFov(40) 
     }, { 
     // letter - https://www.flaticon.com/free-icon-font/envelope_3916632?page=1&position=3&term=mail&origin=search&related_id=3916632

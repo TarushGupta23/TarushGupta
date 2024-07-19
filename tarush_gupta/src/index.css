@@ -6,13 +6,14 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     user-select: none;
+    color: white;
 }
 
 :root {
     --primary: #89cff0; /* better color :  #61ccff */
     --primary-dark: #016391;
     --secondary: #282c34;
-    --secondary-transparent: #282c3480;
+    --secondary-transparent: #282c3460;
 
     --loader-z: 1000;
     --nav-z: 999;

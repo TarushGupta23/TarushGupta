@@ -14,7 +14,7 @@ nav ul {
     gap: .6rem;
     padding: .4rem 2.2rem;
     border-radius: 1000px;
-    background-color: rgba(40, 44, 52, .5);
+    background-color: var(--secondary-transparent);
     overflow: hidden;
     position: relative;
     top: -100px;
