@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls, ScrollControls } from "@react-three/drei";
 import { Suspense } from "react";
 import Camera from "./components/3d/Camera";
 import Model from "./components/3d/Model";
@@ -16,7 +16,7 @@ export default function Experience() {
             
             <Suspense fallback={null}>
                 <Environment background files={'maps/map12.hdr'} />
-                <Model />
+                    <Model />
             </Suspense>
         </Canvas>
     </>

@@ -6,9 +6,9 @@ import ComputerHtml from './components/computer/ComputerHtml';
 
 function App() {
   return <>
-    <Navbar />
+    {/* <Navbar /> */}
     <Experience />
-    <Loader />
+    {/* <Loader /> */}
     {/* <CupHtml /> */}
     {/* <ComputerHtml /> */}
   </>
