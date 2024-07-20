@@ -4,10 +4,10 @@ import { useEffect, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Vector3 } from "three";
 
-let isTransitioning = false;
+let isTransitioning = false; // need to remove this
 let isScrolling = false;
 let transitionTimeout;
-let currentCamIndex = 2;
+let currentCamIndex = 6;
 const cameraRotation = new Vector3(-.6, 0, 0)
 
 export default function Camera() {
@@ -41,6 +41,10 @@ export default function Camera() {
         cameraRotation.lerp(cameraPath[currentCamIndex].rotation, .05)
         cameraGrp.current.rotation.setFromVector3(cameraRotation)
     })
+
+    useEffect(() => {
+        console.log('use effect was called !! -> ', currentCamIndex)
+    }, [currentCamIndex])
 
     return <group 
         ref={cameraGrp}

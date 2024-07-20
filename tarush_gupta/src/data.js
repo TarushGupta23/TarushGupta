@@ -29,7 +29,7 @@ const path = [
         fov: 36.76215277777778
     }, { 
     // phone - https://www.flaticon.com/free-icon-font/mobile-notch_8034760?page=1&position=7&term=phone&origin=search&related_id=8034760
-        position: [4.205, -2.497 + currentDisplacement, 4.74], 
+        position: [3.205, -2.75 + currentDisplacement, 6.74], 
         rotation: [0, -.4, 0], 
         // fov: 11.02864583333333
         fov: 36.76215277777778

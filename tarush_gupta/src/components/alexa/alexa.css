@@ -1,0 +1,67 @@
+.alexaContainer {
+    z-index: var(--html-z);
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: flex;
+    align-items: center; justify-content: center;
+    background-image: radial-gradient(circle farthest-corner at center bottom, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, .8));
+}
+.speechBox {
+    position: absolute;
+    width: 600px;
+    top: 36%; left: 30%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    display: flex;
+    align-items: center; justify-content: center;
+    gap: 1rem;
+    background-color: var(--secondary);
+    border-radius: 2rem;
+    z-index: 1;
+    transition: all .2s ease;
+}
+.speechBox .imageCover {
+    height: 8.2rem;
+    padding: .2rem;
+    background: conic-gradient(from 60deg, #05A0D1, #de5d83, #e0b93b, #05A0D1);
+    border-radius: 1000px;
+}
+.speechBox .imageCover img {
+    height: 100%; aspect-ratio: 1;
+    border-radius: 1000px;
+    border: 3px solid var(--secondary);
+}
+.speechBox .data {
+    display: flex; flex-direction: column;
+    align-items: baseline;
+    gap: .2rem;
+}
+.speechBox .data span { font-size: .6rem; font-style: italic; }
+.speechBox .speech {
+    padding-bottom: 1.4rem;
+    padding-left: 2.4rem;
+    padding-top: .2rem;
+    position: relative;
+}
+.speechBox .icon {
+    position: absolute;
+    top: -.6rem; left: 0;
+    height: 1.8rem; aspect-ratio: 1;
+    background: linear-gradient(160deg, white, var(--primary) 10%, var(--primary-dark));
+    mask-image: url('./../../../public/quote.png');
+    mask-size: 100%;
+}
+.speechBox .tail {
+    position: absolute;
+    top: calc(100% - 3px); right: 4rem;
+    border-left: 2rem solid transparent;
+    border-bottom: 2.5rem solid transparent; 
+    border-top: 2.5rem solid var(--secondary);
+    border-right: 2rem solid var(--secondary);
+}
+.speechBox.hidden {
+    opacity: 0;
+    pointer-events: none;
+    top: 40%;
+}
