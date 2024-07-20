@@ -1,129 +1,35 @@
 import './computer.css'
 export default function ComputerHtml() {
+    const projectList = [
+        {name: 'Name of Project', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description'},
+        {name: 'Name of Project', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description'},
+        {name: 'Name of Project', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description'},
+        {name: 'Name of Project', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description'},
+        {name: 'Name of Project', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description'},
+        {name: 'Name of Project', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description'},
+        {name: 'Name of Project', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description'},
+        {name: 'Name of Project', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description'},
+    ]
     return <div className="computerContainer">
         <div className="computerWrapper">
-            <h2>Web Development Projects</h2>
+            <strong>Top Web Projects</strong>
             <ul>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
-                <li>
-                    proj name
-                    <span>
-                        <img src="/icons/loader/node.png" alt="" />
-                        <img src="/icons/loader/react.png" alt="" />
-                        <img src="/icons/loader/mongodb.png" alt="" />
-                    </span>
-                </li>
+                {
+                    projectList.map((project, index) => (<li key={index}>
+                        <div className='data'>
+                            <span className='name'>{project.name} <span>{project.desc}</span></span>
+                            <ul className='links'>
+                                <a href={project.repoLink}><img src="/icons/cup/github.png" alt="" /> {project.repoName}</a>
+                                <a href={project.liveLink}><img src="/icons/cup/link.png" alt="" /> view live</a>
+                            </ul>
+                        </div>
+                        <div className="tech-imgs">
+                            {
+                                project.tech.map((tech) => (<img key={tech} src={`/icons/loader/${tech}.png`}></img>))
+                            }
+                        </div>
+                    </li>))
+                }
             </ul>
         </div>
     </div>

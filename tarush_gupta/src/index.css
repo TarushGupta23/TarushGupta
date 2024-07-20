@@ -10,7 +10,10 @@
 }
 
 :root {
-    --primary: #89cff0; /* better color :  #61ccff */
+    --primary: #9bdfff;
+    /* --primary: #89cff0; */ 
+    /* initial ^ */
+    /* --primary: #61ccff; */
     --primary-dark: #016391;
     --secondary: #282c34;
     --secondary-transparent: #282c3460;
@@ -30,3 +33,9 @@ html, body {
     height: 100vh;
 }
 ul { list-style: none; }
+strong {
+    background: linear-gradient(160deg, white, var(--primary) 10%, var(--primary-dark));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

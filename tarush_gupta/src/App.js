@@ -1,7 +1,7 @@
-import Navbar from './components/navbar/Navbar';
-import Loader from './components/loader/Loader';
+// import Navbar from './components/navbar/Navbar';
+// import Loader from './components/loader/Loader';
 import Experience from './Experience';
-import CupHtml from './components/cup/CupHtml';
+// import CupHtml from './components/cup/CupHtml';
 import ComputerHtml from './components/computer/ComputerHtml';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <Experience />
     {/* <Loader /> */}
     {/* <CupHtml /> */}
-    {/* <ComputerHtml /> */}
+    <ComputerHtml />
   </>
 }
 

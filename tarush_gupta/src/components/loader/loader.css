@@ -1,19 +1,21 @@
-.loadWrapper {
+.loadContainer {
     z-index: var(--loader-z);
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--secondary);
-    gap: 2rem;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: flex; 
+    background-image: url('./../../../public/Untitled\ design-6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: all 1.2s ease-out;
 }
-
+.loadWrapper {
+    gap: 2rem;
+    width: 100vw; height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    backdrop-filter: blur(100px);
+}
 .loaderIconContainer {
     display: flex; gap: 1rem;
 }
@@ -51,12 +53,12 @@
 
 .loadingText { color: var(--primary); }
 
-.loadWrapper.hidden {
+.loadContainer.hidden {
     opacity: 0;
     transform: translateY(100%);
 }
 
-.loadWrapper.hidden img { animation: none !important; }
+.loadContainer.hidden img { animation: none !important; }
 
 @keyframes bounce {
     0%, 100% {

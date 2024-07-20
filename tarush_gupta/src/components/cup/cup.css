@@ -3,7 +3,7 @@
     position: fixed;
     width: 100vw; height: 100vh;
     top: 0; left: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .1));
+    background: linear-gradient(90deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .0) 65%);
     transition: all .4s ease-out;
 }
 .cupContainer.hidden {
@@ -31,11 +31,10 @@
 }
 .cupWrapper ul li {
     padding: .6rem;
-    background-color: var(--secondary-transparent);
     width: 150px;
     display: flex; gap: .4rem;
     align-items: center; justify-content: center;
-    border: 2px solid white;
+    background: linear-gradient(140deg, #3a3f49, var(--secondary),  #191c21);
     border-radius: 12px;
     cursor: pointer;
 }
@@ -45,11 +44,10 @@
 }
 
 .cupWrapper ul li:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-    background-color: var(--secondary);
+    background: linear-gradient(140deg, var(--primary),  var(--primary-dark), #002f45);
+    border: none;
 }
-.cupWrapper ul li:hover img { filter: brightness(1); }
+
 .scrollContainer {
     display: flex; gap: .4rem;
     align-items: center; justify-content: center;
@@ -64,9 +62,5 @@
     padding: .5rem 1rem;
 }
 .cupWrapper h2 strong {
-    font-weight: 500;
-    color: var(--primary);
-    background-color: var(--secondary-transparent);
     padding: 0 .3rem;
-    border-radius: 5px;
 }

@@ -3,7 +3,7 @@ import { Environment, OrbitControls, ScrollControls } from "@react-three/drei";
 import { Suspense } from "react";
 import Camera from "./components/3d/Camera";
 import Model from "./components/3d/Model";
-import Lights from "./components/3d/Lights";
+// import Lights from "./components/3d/Lights";
 
 export default function Experience() {
     return <>
@@ -15,7 +15,7 @@ export default function Experience() {
             {/* <Lights /> */}
             
             <Suspense fallback={null}>
-                <Environment background files={'maps/map12.hdr'} />
+                <Environment background files={'maps/map.hdr'} backgroundRotation={[0, Math.PI, 0]} environmentRotation={[0, Math.PI, 0]} environmentIntensity={.7} />
                     <Model />
             </Suspense>
         </Canvas>

@@ -1,12 +1,14 @@
 import { PerspectiveCamera } from "@react-three/drei";
-import getFov, { cameraPath } from "../../data";
+import { cameraPath } from "../../data";
 import { useEffect, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import { Vector3 } from "three";
 
 let isTransitioning = false;
 let isScrolling = false;
 let transitionTimeout;
-let currentCamIndex = 0;
+let currentCamIndex = 2;
+const cameraRotation = new Vector3(-.6, 0, 0)
 
 export default function Camera() {
     useEffect(() => {
@@ -32,14 +34,12 @@ export default function Camera() {
 
     const cameraGrp = useRef();
     const camera = useRef();
-    useEffect(()=> {
-        console.log(camera.current.getFocalLength())
-    }, [camera])
 
     useFrame(() => {
         cameraGrp.current.position.lerp(cameraPath[currentCamIndex].position, .05)
         camera.current.setFocalLength(cameraPath[currentCamIndex].fov)
-        cameraGrp.current.rotation.setFromVector3(cameraPath[currentCamIndex].rotation)
+        cameraRotation.lerp(cameraPath[currentCamIndex].rotation, .05)
+        cameraGrp.current.rotation.setFromVector3(cameraRotation)
     })
 
     return <group 
