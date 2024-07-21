@@ -4,15 +4,21 @@
     width: 100vw; height: 100vh;
     top: 0; left: 0;
     background: linear-gradient(90deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .0) 65%);
-    transition: all .4s ease-out;
+    transition: all .4s ease-in-out;
 }
 .cupContainer.hidden {
     transform: translate(-100%, 0%);
+}
+.cupContainer.hidden .cupWrapper {
+    transform: translate(20%, 0%);
 }
 .cupWrapper {
     display: flex;
     align-items: center; justify-content: center;
     width: 60%; height: 100%;
+    transform: none;
+    transition: all .4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition-delay: .2s;
 }
 .cupWrapper > div {
     display: flex; flex-direction: column;

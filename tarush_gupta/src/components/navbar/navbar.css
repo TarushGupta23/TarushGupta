@@ -1,7 +1,7 @@
 nav {
     display: flex;
     align-items: center; justify-content: center;
-    padding-top: .5rem;
+    padding-top: .2rem;
     position: fixed;
     top: 0; left: 0;
     z-index: var(--nav-z);
@@ -21,10 +21,12 @@ nav ul {
     padding: .2rem;
     border-radius: 1000px;
     position: relative;
-    top: -80px;
+    transform: scale(.8) translateY(-150%);
     background: linear-gradient(-30deg, white, var(--primary) 30%, var(--primary-dark));
 }
-nav:hover .navWrapper { top: 0; }
+nav:hover .navWrapper { 
+    transform: scale(.8) translateY(0px);
+}
 nav ul li {
     border-radius: 1000px;
     display: flex;

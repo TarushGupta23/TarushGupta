@@ -9,11 +9,11 @@ import Calander from './models/Calander'
 import Trophies from './models/Trophies'
 import Resume from './models/Resume'
 
-export default function Model() {
+export default function Model({cameraIndex}) {
     return <>
         <Computer />
         <Alexa />
-        <Iphone />
+        <Iphone idx={cameraIndex}/>
         <Cup />
         <Table />
         <Books />

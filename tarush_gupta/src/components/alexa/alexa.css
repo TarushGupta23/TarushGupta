@@ -7,10 +7,13 @@
     align-items: center; justify-content: center;
     background-image: radial-gradient(circle farthest-corner at center bottom, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, .8));
 }
+.alexaContainer.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
 .speechBox {
     position: absolute;
     width: 600px;
-    top: 36%; left: 30%;
     transform: translate(-50%, -50%);
     padding: 2rem;
     display: flex;
@@ -19,7 +22,14 @@
     background-color: var(--secondary);
     border-radius: 2rem;
     z-index: 1;
-    transition: all .2s ease;
+    transition: all .4s ease-in;
+}
+.speechBox.left {
+    top: 40%; left: 30%;
+}
+.speechBox.right {
+    top: 28%; left: 70%;
+    transition-delay: .1s;
 }
 .speechBox .imageCover {
     height: 8.2rem;
@@ -52,16 +62,47 @@
     mask-image: url('./../../../public/quote.png');
     mask-size: 100%;
 }
-.speechBox .tail {
+.speechBox.left .tail {
     position: absolute;
-    top: calc(100% - 3px); right: 4rem;
+    top: calc(100% - 3px); right: 3rem;
     border-left: 2rem solid transparent;
-    border-bottom: 2.5rem solid transparent; 
-    border-top: 2.5rem solid var(--secondary);
+    border-bottom: 2.4rem solid transparent; 
+    border-top: 2.4rem solid var(--secondary);
     border-right: 2rem solid var(--secondary);
+}
+.speechBox.right .tail {
+    position: absolute;
+    top: calc(100% - 3px); left: 7.5rem;
+    border-left: 2rem solid var(--secondary);
+    border-bottom: 3.5rem solid transparent; 
+    border-top: 3.5rem solid var(--secondary);
+    border-right: 2rem solid transparent;
 }
 .speechBox.hidden {
     opacity: 0;
     pointer-events: none;
-    top: 40%;
+}
+.speechBox.left.hidden { top: 50%; }
+.speechBox.right.hidden { top: 38%; }
+.alexaContainer .navigation {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%; bottom: 8%;
+    background-color: var(--secondary);
+    display: flex; gap: .2rem;
+    padding: 0px .6rem;
+    border-radius: 1000px;
+}
+.alexaContainer .navigation span {
+    height: .8rem; width: .8rem;
+    border-radius: 100%;
+    border: 2px solid var(--primary);
+    margin: .6rem;
+    transition: all .4s ease;
+}
+.alexaContainer .navigation span.active {
+    background-color: var(--primary);
+}
+.alexaContainer .navigation.hidden {
+    opacity: 0;
 }

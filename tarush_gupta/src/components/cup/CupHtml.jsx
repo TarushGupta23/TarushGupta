@@ -1,7 +1,7 @@
 import './cup.css'
 
-export default function CupHtml() {
-    return <div className="cupContainer">
+export default function CupHtml({idx}) {
+    return <div className={idx===0? "cupContainer" : "cupContainer hidden"}>
         <div className="cupWrapper">
             <div>
                 <p>Hello, my name is</p>

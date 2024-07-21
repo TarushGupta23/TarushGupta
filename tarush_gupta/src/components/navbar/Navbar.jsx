@@ -1,19 +1,20 @@
-import { useState } from 'react'
 import './navbar.css'
+import { dataLen } from '../../data'
 
-export default function Navbar() {
+export default function Navbar({ setCameraIndex, cameraIndex }) {
     const navIcons = [
-        "home", "cup", "resume", "laptop", "mobile", "calendar", "trophy", "testimonial", "mail", "circle-c",
+        "home", "cup", "resume", "laptop", "mobile", "calendar", "trophy", "testimonial", "mail" // "circle-c",
     ]
-    const [selectedIcon, setSelectedIcon] = useState("home")
+    const iconIdx = [ dataLen-1, 0, 1, 2, 3, 4, 5, 6, 7, dataLen-1 ]
+
     return <nav>
         <div className="navWrapper">
             <ul>
                 {
-                    navIcons.map(icon => (
+                    navIcons.map((icon,index) => (
                     <li 
-                        onClick={() => setSelectedIcon(icon)}
-                        className={icon === selectedIcon ? "active" : ""}
+                        onClick={() => setCameraIndex(iconIdx[index])}
+                        className={index === ((cameraIndex+1)%dataLen) ? "active" : ""}
                         key={icon} 
                         style={{
                             '--mask-image': `url(./../../../icons/navbar/${icon}.png)`,
@@ -21,6 +22,13 @@ export default function Navbar() {
                         }}
                     > </li>))
                 }
+                <li 
+                    onClick={() => setCameraIndex(dataLen-1) }
+                    style={{
+                        '--mask-image': `url(./../../../icons/navbar/circle-c.png)`,
+                        '--mask-active-image': `url(./../../../icons/navbar/circle-c-fill.png)`,
+                    }}
+                > </li>
             </ul>
         </div>
     </nav>

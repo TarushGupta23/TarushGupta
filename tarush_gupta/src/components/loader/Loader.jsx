@@ -1,11 +1,7 @@
-import { useProgress } from "@react-three/drei"
-
 import './loader.css'
 
-export default function Loader() {
-    const { progress } = useProgress()
-
-    return <div className={progress === 100? "loadContainer hidden":"loadContainer"}>
+export default function Loader({ progress }) {
+    return <div className={progress == 100? "loadContainer hidden":"loadContainer"}>
         <div className="loadWrapper">
             <div className="loaderIconContainer">
                 <img src="/icons/loader/mongodb.png" alt="mongodb-icon" />
@@ -19,10 +15,10 @@ export default function Loader() {
                 <img src="/icons/loader/kotlin.png" alt="kotlin-icon" />
             </div>
             <div className="loadingBar">
-                <div className="loadingBarInner" style={{ width: `${progress.toFixed(2)}%` }}></div>
+                <div className="loadingBarInner" style={{ width: `${progress}%` }}></div>
             </div>
             <h2 className="loadingText">
-                {progress.toFixed(2)}% Loaded
+                {progress}% Loaded
             </h2>
         </div>
     </div>
