@@ -49,6 +49,10 @@ const rawPath = [
         position: [.025, currentDisplacement+.4, 3.20], 
         rotation: [-1.57, 0, -.1]
     }, { 
+    // credit pos
+        position: [7.06, 14.66, 6.5], 
+        rotation: [.1, 0.87, -.14]
+    }, { 
     // mainPos - https://www.flaticon.com/free-icon-font/house-chimney_9243863?page=1&position=13&term=home&origin=search&related_id=9243863
         position: [-0.35, 13 + currentDisplacement, 52.7], 
         rotation: [-.33, 0, 0]

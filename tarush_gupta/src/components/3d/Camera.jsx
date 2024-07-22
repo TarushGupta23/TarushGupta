@@ -11,10 +11,14 @@ let parallaxX = 0, parallaxY = 0;
 export default function Camera({ cameraIndex }) {
     const cameraGrp = useRef();
     const camera = useRef();
-    // const {x, y, z} = useControls('', {
-    //     x: { value: 1.5, min: -Math.PI, max: Math.PI, step: .05 },
-    //     y: { value: 4.6-1.53, min: -Math.PI, max: Math.PI, step: .05 },
-    //     z: { value: -2.59, min: -Math.PI, max: Math.PI, step: .05 }
+    const cameraInnerGrp = useRef();
+    // const {x, y, z, a, b, c} = useControls('', {
+    //     x: { value: 1.5, min: -2*Math.PI, max: 2*Math.PI, step: .05 },
+    //     y: { value: 4.6-1.53, min: -2*Math.PI, max: 2*Math.PI, step: .05 },
+    //     z: { value: -2.59, min: -2*Math.PI, max: 2*Math.PI, step: .05 },
+    //     a: { value: -2.59, min: -20, max: 20, step: .05 },
+    //     b: { value: -2.59, min: -20, max: 20, step: .05 },
+    //     c: { value: -2.59, min: -20, max: 20, step: .05 },
     // })
 
     useEffect(() => {
@@ -37,24 +41,24 @@ export default function Camera({ cameraIndex }) {
         cameraRotation.lerp(cameraPath[cameraIndex].rotation, .05)
         cameraGrp.current.rotation.setFromVector3(cameraRotation)
         
-        // camera.current.position.x = (parallaxX - camera.current.position.x)*0.5;
-        // camera.current.position.y = (parallaxY - camera.current.position.y)*0.5;
+        cameraInnerGrp.current.position.x = (parallaxX - cameraInnerGrp.current.position.x)*0.5;
+        cameraInnerGrp.current.position.y = (parallaxY - cameraInnerGrp.current.position.y)*0.5;
     })
 
     return <group 
         ref={cameraGrp}
         position={rawPath[dataLen-1].position} 
         rotation={rawPath[dataLen-1].rotation}
-        // position={[3.205, -2.75 + 4.6, 6.74]}
-        // rotation={[0, -.4, 0]}
-        // position={[x, y, z]} 
-        // rotation={[...]}
+        // position={[a, b, c]} 
+        // rotation={[x, y, z]}
     >
-        <PerspectiveCamera 
-            ref={camera}
-            makeDefault 
-            fov='30'
-            position={[0, 0, 0]}
-        />
+        <group ref={cameraInnerGrp}>
+            <PerspectiveCamera 
+                ref={camera}
+                makeDefault 
+                fov='30'
+                position={[0, 0, 0]}
+            />
+        </group>
     </group>
 }

@@ -8,6 +8,7 @@ import Letter from './models/Letter'
 import Calander from './models/Calander'
 import Trophies from './models/Trophies'
 import Resume from './models/Resume'
+import Drone from './models/Drone'
 
 export default function Model({cameraIndex}) {
     return <>
@@ -21,5 +22,6 @@ export default function Model({cameraIndex}) {
         <Calander />
         <Trophies />
         <Resume />
+        <Drone idx={cameraIndex}/>
     </>
 }

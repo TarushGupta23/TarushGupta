@@ -22,29 +22,28 @@ export default function AlexaHtml({ idx }) {
         }
         return () => { clearTimeout(timeoutId) }
     }, [speechIdx, idx])
+
     return <div className={idx===6?"alexaContainer":"alexaContainer hidden"}>
         {
             list.map((speech, index) => {
                 const isHidden = idx === 6 && Math.floor(index/2) === speechIdx ? '' : 'hidden';
                 const position = index%2 == 0 ? 'left' : 'right';
-                return <>
-                    <div className={`${isHidden} ${position} speechBox`}>
-                        <div className="imageCover">
-                            <img src="TarushFace.jpg" alt="" />
-                        </div>
-                        <div>
-                            <div className="speech">
-                                <span className="icon"></span>
-                                {speech.text}
-                            </div>
-                            <div className="data">
-                                <strong>{speech.by}</strong>
-                                <span>{speech.position}</span>
-                            </div>
-                        </div>
-                        <div className="tail"></div>
+                return <div className={`${isHidden} ${position} speechBox`} key={index}>
+                    <div className="imageCover">
+                        <img src="TarushFace.jpg" alt="" />
                     </div>
-                </>
+                    <div>
+                        <div className="speech">
+                            <span className="icon"></span>
+                            {speech.text}
+                        </div>
+                        <div className="data">
+                            <strong>{speech.by}</strong>
+                            <span>{speech.position}</span>
+                        </div>
+                    </div>
+                    <div className="tail"></div>
+                </div>
             })
         }
         <div className={idx===6? "navigation" : "hidden navigation"}>

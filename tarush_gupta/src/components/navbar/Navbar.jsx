@@ -3,9 +3,9 @@ import { dataLen } from '../../data'
 
 export default function Navbar({ setCameraIndex, cameraIndex }) {
     const navIcons = [
-        "home", "cup", "resume", "laptop", "mobile", "calendar", "trophy", "testimonial", "mail" // "circle-c",
+        "home", "cup", "resume", "laptop", "mobile", "calendar", "trophy", "testimonial", "mail", "circle-c",
     ]
-    const iconIdx = [ dataLen-1, 0, 1, 2, 3, 4, 5, 6, 7, dataLen-1 ]
+    const iconIdx = [ dataLen-1, 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
 
     return <nav>
         <div className="navWrapper">
@@ -22,13 +22,6 @@ export default function Navbar({ setCameraIndex, cameraIndex }) {
                         }}
                     > </li>))
                 }
-                <li 
-                    onClick={() => setCameraIndex(dataLen-1) }
-                    style={{
-                        '--mask-image': `url(./../../../icons/navbar/circle-c.png)`,
-                        '--mask-active-image': `url(./../../../icons/navbar/circle-c-fill.png)`,
-                    }}
-                > </li>
             </ul>
         </div>
     </nav>
