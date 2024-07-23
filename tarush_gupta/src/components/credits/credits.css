@@ -5,6 +5,9 @@
     background-image: radial-gradient(circle farthest-corner at center, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, .8));
     z-index: var(--html-z);
 }
+.creditsContainer.hidden {
+    display: none;
+}
 .creditsWrapper {
     display: flex;
     align-items: center; justify-content: space-between;
@@ -12,7 +15,68 @@
 }
 .creditsWrapper .left, .creditsWrapper .right {
     display: flex; flex-direction: column;
+    gap: 3rem;
     align-items: center; justify-content: center;
-    border: 1px solid red;
-    height: 100%; width: 35%;
+    height: 100%; width: 28%;
+}
+.creditsWrapper section {
+    display: flex; flex-direction: column;
+    width: 100%;
+    gap: .6rem;
+    padding: 0px 2rem;
+}
+
+.creditsWrapper section strong {
+    font-size: 1.8rem;
+    background: linear-gradient(-30deg, var(--primary-dark), var(--primary));
+    width: fit-content;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+.creditsWrapper section ul * {color: black;}
+.creditsWrapper section ul {
+    /* display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: .4rem; */
+    display: flex; flex-direction: column;
+    gap: .4rem;
+}
+.creditsWrapper section ul li {
+    display: flex; flex-direction: column;
+}
+.creditsWrapper section ul li .name {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.creditsWrapper section ul li i {
+    font-size: .9rem; font-weight: normal;
+}
+.creditsWrapper section ul li a {
+    text-decoration: none;
+    font-size: 1rem; 
+    font-style: italic;
+}
+.creditsWrapper .right {
+    text-align: right;
+}
+.creditsWrapper .right strong {
+    align-self: flex-end;
+}
+.creditsWrapper h2{
+    font-size: 2.4rem;
+    align-self: flex-start;
+    padding: 1rem 2rem;
+    background: linear-gradient(-30deg, var(--primary-dark), var(--primary));
+    width: fit-content;
+    position: relative;
+    border-top-right-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+}
+.creditsWrapper .mid {
+    align-self: flex-end;
+    color: black;
+    padding: 2.5rem 0px;
+    font-style: italic;
 }

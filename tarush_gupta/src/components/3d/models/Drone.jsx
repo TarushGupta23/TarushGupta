@@ -32,8 +32,8 @@ const positions = [
         position: new Vector3(0, 16, 0),
         rotation: new Vector3(0.3, -2.32, 0.3),
     }, { // home
-        position: new Vector3(0, 16, 0),
-        rotation: new Vector3(0.3, -2.32, 0.3),
+        position: new Vector3(-5.5, 3.2, -4.6),
+        rotation: new Vector3(.3, -3.8, 0),
     }
 ]
 
