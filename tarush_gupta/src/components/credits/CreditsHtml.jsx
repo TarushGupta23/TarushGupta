@@ -27,7 +27,7 @@ export default function CreditsHtml({ idx }) {
     const iconList = [
         { link: 'https://www.flaticon.com', name: 'Flaticon', websiteName: 'flaticon.com' },
     ]
-    return <div className={idx===8?"creditsContainer":"creditsContainer hidden"}>
+    return <div className={idx===9?"creditsContainer":"creditsContainer hidden"}>
         <div className="creditsWrapper">
             <div className="left">
                 <h2>Credits and Acknowledgements</h2>

@@ -16,18 +16,18 @@ let isScrolling = false;
 let transitionTimeout;
 
 function App() {
-    const [cameraIndex, setCameraIndex] = useState(dataLen - 1);
-    // const [cameraIndex, setCameraIndex] = useState(3);
+    const [cameraIndex, setCameraIndex] = useState(0);
     const { progress } = useProgress()
 
     useEffect(() => {
-        if (progress == 100) { setCameraIndex(0) }
+        if (progress == 100) { setCameraIndex(1) }
     }, [progress])
 
     useEffect(() => {
         const handleWheel = (event) => {
-            if (isScrolling) return; // Ignore scroll events if transitioning or already scrolling
-            isScrolling = true; // Set scrolling flag
+            if (isScrolling) return;
+            
+            isScrolling = true;
             if (event.deltaY > 0) {
                 setCameraIndex((idx) => {
                     idx = (idx + 1) % dataLen
@@ -39,28 +39,23 @@ function App() {
                     return idx
                 });
             }
-            // Set timeout to reset scrolling flag after delay
             if (transitionTimeout) clearTimeout(transitionTimeout);
 
             transitionTimeout = setTimeout(() => {
                 isScrolling = false;
-            }, 2000);    
-            console.log(cameraIndex, dataLen-1)
+            }, 2000);
         }
 
         window.addEventListener('wheel', handleWheel)
 
         return () => { 
-            if (transitionTimeout) clearTimeout(transitionTimeout) 
+            if (transitionTimeout) {
+                clearTimeout(transitionTimeout)
+                isScrolling = false;
+            }
             window.removeEventListener('wheel', handleWheel)
         }
     }, [])
-
-    // useEffect(() => {
-    //     if (orbitControlRef.current) {
-    //         console.log(orbitControlRef.current.enabled)
-    //     }
-    // }, [cameraIndex])
 
     return <>
         <Navbar setCameraIndex={setCameraIndex} cameraIndex={cameraIndex} />
@@ -68,11 +63,10 @@ function App() {
         <Canvas>
             <Camera cameraIndex={cameraIndex} />
         
-            {/* {cameraIndex===dataLen-1 && 
-            <OrbitControls enabled makeDefault enableZoom={false} enablePan={false} minPolarAngle={0} maxPolarAngle={Math.PI * 0.55} />} */}
+            <OrbitControls enabled={cameraIndex===0} makeDefault enableZoom={false} enablePan={false} minPolarAngle={0} maxPolarAngle={Math.PI * 0.55} />
 
             <Suspense fallback={null}>
-                <Environment background files={'maps/map.hdr'} backgroundRotation={[0, Math.PI, 0]} environmentRotation={[0, Math.PI, 0]} environmentIntensity={.7} />
+                <Environment background files={'backgrounds/map.hdr'} backgroundRotation={[0, Math.PI, 0]} environmentRotation={[0, Math.PI, 0]} environmentIntensity={.7} />
                 <Model cameraIndex={cameraIndex} />
             </Suspense>
         </Canvas>

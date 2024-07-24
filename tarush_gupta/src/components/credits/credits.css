@@ -4,9 +4,10 @@
     top: 0; left: 0;
     background-image: radial-gradient(circle farthest-corner at center, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, .8));
     z-index: var(--html-z);
+    transition: all .4s ease-in-out;
 }
 .creditsContainer.hidden {
-    display: none;
+    opacity: 0; pointer-events: none;
 }
 .creditsWrapper {
     display: flex;
@@ -18,6 +19,16 @@
     gap: 3rem;
     align-items: center; justify-content: center;
     height: 100%; width: 28%;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    transition-delay: .2s;
+    left: 0;
+}
+.creditsContainer.hidden .left {
+    left: -50%;
+}
+.creditsContainer.hidden .right {
+    left: 50%;
 }
 .creditsWrapper section {
     display: flex; flex-direction: column;

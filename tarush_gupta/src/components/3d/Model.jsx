@@ -12,16 +12,16 @@ import Drone from './models/Drone'
 
 export default function Model({cameraIndex}) {
     return <>
-        <Computer />
-        <Alexa />
-        <Iphone idx={cameraIndex}/>
-        <Cup />
-        <Table />
-        <Books />
-        <Letter />
-        <Calander />
-        <Trophies />
-        <Resume />
+        <Computer idx={cameraIndex} />
+        <Alexa idx={cameraIndex} />
+        <Iphone idx={cameraIndex} />
+        <Cup idx={cameraIndex} />
+        <Table idx={cameraIndex} />
+        <Books idx={cameraIndex} />
+        <Letter idx={cameraIndex}/>
+        <Calander idx={cameraIndex} />
+        <Trophies idx={cameraIndex} />
+        <Resume idx={cameraIndex} />
         <Drone idx={cameraIndex}/>
     </>
 }

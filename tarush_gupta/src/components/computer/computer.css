@@ -5,7 +5,7 @@
     position: absolute;
     right: 0; top: 0;
     width: 100vw; height: 100vh;
-    background: linear-gradient(90deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
     transition: all .4s ease-in-out;
     opacity: 1;
 }
@@ -64,7 +64,7 @@
 }
 .computerWrapper .data .links {
     display: flex; flex-direction: column;
-    width: 10rem;
+    width: 8rem;
 }
 .computerWrapper .data .links a {
     transform: translateY(30px);

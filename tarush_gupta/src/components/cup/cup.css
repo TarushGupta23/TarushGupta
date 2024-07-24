@@ -44,6 +44,9 @@
     border-radius: 12px;
     cursor: pointer;
 }
+.cupWrapper ul a {
+    text-decoration: none;
+}
 .cupWrapper ul li img { 
     height: 1.2rem; 
     filter: brightness(1.8);
@@ -55,9 +58,28 @@
 }
 
 .scrollContainer {
-    display: flex; gap: .4rem;
-    align-items: center; justify-content: center;
-    width: 8rem;
+    position: absolute;
+    top: 74%; left: 50%;
+    width: 1.8rem; height: 3.4rem;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    border-radius: 1000px;
+    opacity: .6;
+}
+#scroll-icon {
+    position: absolute;
+    background-color: white;
+    width: 1rem; height: 1.4rem;
+    top: 50%; left: 50%;
+    animation: scrollAnim 1.5s infinite;
+    border-radius: 1000px;
+}
+@keyframes scrollAnim {
+    0%, 100% {
+        transform: translate(-50%, -100%);
+    } 50% {
+        transform: translate(-50%, 0%);
+    }
 }
 .cupWrapper p {
     font-size: 1.4rem;

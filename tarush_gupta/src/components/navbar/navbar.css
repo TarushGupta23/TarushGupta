@@ -24,7 +24,7 @@ nav ul {
     transform: scale(.8) translateY(-150%);
     background: linear-gradient(-30deg, white, var(--primary) 30%, var(--primary-dark));
 }
-nav:hover .navWrapper { 
+nav:hover .navWrapper, nav.active .navWrapper { 
     transform: scale(.8) translateY(0px);
 }
 nav ul li {

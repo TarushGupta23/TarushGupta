@@ -4,7 +4,7 @@
     top: 0; left: 0;
     width: 100vw; height: 100vh;
     display: flex; 
-    background-image: url('./../../../public/Untitled\ design-6.png');
+    background-image: url('./../../../public/backgrounds/loadingBgrd.png');
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 1.2s ease-out;

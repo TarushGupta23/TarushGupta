@@ -1,37 +1,29 @@
 import './computer.css'
 export default function ComputerHtml({idx}) {
     const webProjects = [
-        {name: 'Name of Project1', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project2', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project3', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project4', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project5', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project6', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project7', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project8', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
+        {name: 'Atlas Game', repoLink: 'https://github.com/TarushGupta23/ATLAS_GAME', tech: ['react', 'socketio', 'pgsql'], liveLink: 'https://atlas-game.vercel.app', desc: 'An interactive web app built with React and Socket.IO, featuring a custom Express server and API, both developed by me, and a PostgreSQL database for efficient data management.'},
+        {name: 'Parking Management system', repoLink: 'https://github.com/TarushGupta23/Parking-Management-System', tech: ['php', 'css'], liveLink: '', desc: 'A comprehensive database management system for efficient and organized parking management. The system is built using HTML, CSS, JavaScript, and PHP, providing a user-friendly interface.'},
+        {name: 'Iota Website', repoLink: '', tech: ['css'], liveLink: '', desc: 'Official Website of Iota Club (media cell of college)'},
+        // {name: '', repoLink: '', tech: [], liveLink: '', desc: ''},
+        // {name: '', repoLink: '', tech: [], liveLink: '', desc: ''},
+        // {name: '', repoLink: '', tech: [], liveLink: '', desc: ''},
+        // {name: '', repoLink: '', tech: [], liveLink: '', desc: ''},
     ]
     const androidProjects = [
-        {name: 'Name of Project a', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project b', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project c', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project d', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project e', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project f', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project g', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
-        {name: 'Name of Project h', repoName: 'RepoName', repoLink: 'youtube.com', tech: ['react', 'android', 'firebase'], liveLink: 'google.com', desc: 'hello this is description hello this is description hello this is description hello this is description hello this is description hello this is description hello this '},
+        {name: '', repoLink: '', tech: [], liveLink: '', desc: ''},
     ]
     const renderWebList = () => {
         return webProjects.map((project, index) => (<li key={index} className={index==webProjects.length-1?'web last-item':'web'}>
             <div className="tech-imgs">
                 {
-                    project.tech.map((tech) => (<img key={tech} src={`/icons/loader/${tech}.png`}></img>))
+                    project.tech.map((tech) => (<img key={tech} src={`/icons/skills/${tech}.png`}></img>))
                 }
             </div>
             <div className='data'>
                 <span className='name'>{project.name} <span>{project.desc}</span></span>
                 <ul className='links'>
-                    <a href={project.repoLink} target='_blank'><img src="/icons/cup/github.png" alt="" /> {project.repoName}</a>
-                    <a href={project.liveLink} target='_blank'><img src="/icons/cup/link.png" alt="" /> view live</a>
+                    <a href={project.repoLink} target='_blank'><img src="/icons/other/github.png" alt="" /> Repo</a>
+                    {project.liveLink && <a href={project.liveLink} target='_blank'><img src="/icons/other/link.png" alt="" /> view live</a>}
                 </ul>
             </div>
         </li>))
@@ -40,22 +32,22 @@ export default function ComputerHtml({idx}) {
         return androidProjects.map((project, index) => (<li key={index} className={index==androidProjects.length-1?'android last-item':'android'}>
             <div className="tech-imgs">
                 {
-                    project.tech.map((tech) => (<img key={tech} src={`/icons/loader/${tech}.png`}></img>))
+                    project.tech.map((tech) => (<img key={tech} src={`/icons/skills/${tech}.png`}></img>))
                 }
             </div>
             <div className='data'>
                 <span className='name'>{project.name} <span>{project.desc}</span></span>
                 <ul className='links'>
-                    <a href={project.repoLink} target='_blank'><img src="/icons/cup/github.png" alt="" /> {project.repoName}</a>
-                    <a href={project.liveLink} target='_blank'><img src="/icons/cup/link.png" alt="" /> view live</a>
+                    <a href={project.repoLink} target='_blank'><img src="/icons/other/github.png" alt="" /> Repo</a>
+                    {project.liveLink && <a href={project.liveLink} target='_blank'><img src="/icons/other/link.png" alt="" /> view live</a>}
                 </ul>
             </div>
         </li>))
     }
-    return <div className={idx===2 || idx===3? "computerContainer" : "computerContainer hidden"}>
+    return <div className={idx===3 || idx===4? "computerContainer" : "computerContainer hidden"}>
         <div className="computerWrapper">
-            <strong>Top {idx===2? 'Web' : 'Android'} Projects</strong>
-            <ul className={idx===2? 'web' : 'android'}>
+            <strong>Top {idx===3? 'Web' : 'Android'} Projects</strong>
+            <ul className={idx===3? 'web' : 'android'}>
                 { renderWebList() }
                 { renderAndroList() }
             </ul>

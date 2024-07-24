@@ -14,23 +14,23 @@ export default function AlexaHtml({ idx }) {
 
     useEffect(() => {
         let timeoutId;
-        if (idx === 6) {
+        if (idx === 7) {
             timeoutId = setTimeout(() => {
-                const newIdx = (speechIdx+1)%(list.length/2);
+                const newIdx = (speechIdx+1)%(list.length);
                 setSpeechIdx(newIdx)
-            }, 5000)
+            }, 4000)
         }
         return () => { clearTimeout(timeoutId) }
     }, [speechIdx, idx])
 
-    return <div className={idx===6?"alexaContainer":"alexaContainer hidden"}>
+    return <div className={idx===7?"alexaContainer":"alexaContainer hidden"}>
         {
             list.map((speech, index) => {
-                const isHidden = idx === 6 && Math.floor(index/2) === speechIdx ? '' : 'hidden';
+                const isHidden = idx === 7 && index === speechIdx ? 'active' : 'hidden';
                 const position = index%2 == 0 ? 'left' : 'right';
                 return <div className={`${isHidden} ${position} speechBox`} key={index}>
                     <div className="imageCover">
-                        <img src="TarushFace.jpg" alt="" />
+                        <img src="" alt="" />
                     </div>
                     <div>
                         <div className="speech">
@@ -46,8 +46,8 @@ export default function AlexaHtml({ idx }) {
                 </div>
             })
         }
-        <div className={idx===6? "navigation" : "hidden navigation"}>
-            {[...Array(list.length / 2)].map((_, index) => {
+        <div className={idx===7? "navigation" : "hidden navigation"}>
+            {[...Array(list.length)].map((_, index) => {
                 return <span key={index} className={speechIdx === index ? "active" : ""} onClick={() => setSpeechIdx(index)} />
             })}
         </div>

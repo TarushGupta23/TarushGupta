@@ -1,27 +1,18 @@
 import { Html, useGLTF } from '@react-three/drei';
-import './letter.css'
+import LetterHtml from '../../letter/letterHtml';
+import Icon from '../Icon';
 
-export default function Letter() {
+export default function Letter({idx}) {
     const model = useGLTF('./models/Letter.glb');
 
     return <primitive object={model.scene} position-y={4.6}> 
-        <Html
-            center
-            transform
+        <Icon idx={idx} icon='mail' position={[0.04, -4.14, 3.34]} />
+
+        <Html center transform distanceFactor={2}
             position={[0, -4.078962326049805, 3.1920855045318604]}
             rotation={[-Math.PI/2, 0, -.16]}
-            distanceFactor={2}
         >
-            <section className={`letterContainer`} id='letterContainer'>
-                <strong>Let's have a talk</strong>
-                <form action="">
-                    <div className="email"><input type="mail" placeholder='Email'/></div>
-                    <div className="name"><input type="text" placeholder='Name'/></div>
-                    <div className="message"><textarea name="" id="" placeholder='Message'></textarea></div>
-                    <button>send</button>
-                </form>
-                <div>To: <i>tarush23.gupta@gmail.com</i></div>
-            </section>
+            <LetterHtml idx={idx}/>
         </Html>
     </primitive>;
 }
