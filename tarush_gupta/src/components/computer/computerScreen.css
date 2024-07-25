@@ -1,0 +1,9 @@
+section#computerScreen {
+    display: flex; flex-direction: column;
+    height: 148px; width: 213px;
+    padding: 1rem;
+    justify-content: space-between;
+    background: linear-gradient(0deg, red, green, blue);
+    pointer-events: none;
+    border-radius: 4px;
+}

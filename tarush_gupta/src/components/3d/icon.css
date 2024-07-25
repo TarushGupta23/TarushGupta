@@ -1,29 +1,39 @@
 div#modelIcon {
-    width: 2.5rem; height: 2.5rem;
+    width: 2.6rem; height: 2.6rem;
     display: flex; 
     align-items: center; justify-content: center;
     background-color: rgba(40, 44, 52, 0.5);
     border-radius: 1000px;
-    /* border: 2px solid red; */
     cursor: pointer;
     overflow: hidden;
     transform: scale(1);
-    transition: all .6s cubic-bezier(0.55, 0.055, 0.675, 2);
+    opacity: .4;
 }
+
 div#modelIcon div {
     background: linear-gradient(140deg, var(--primary-dark), var(--primary) 70%, white);
     width: 2rem; height: 2rem;
     border-radius: 1000px;
     mask-image: var(--mask-image);
     -webkit-mask-image: var(--mask-image);
-    -webkit-mask-size: 1.6rem;
-    mask-size: 1.6rem;
+    -webkit-mask-size: 1.5rem;
+    mask-size: 1.5rem;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-position: center;
     mask-position: center;
 }
+div#modelIcon:hover {
+    border: 1px solid var(--primary);
+    background-color: var(--secondary);
+    opacity: 1;
+}
+div#modelIcon.visible {
+    transition: transform .6s cubic-bezier(0.55, 0.055, 0.675, 2);
+    transition-delay: .3s;
+}
 div#modelIcon.hidden {
+    transition: all .2s ease;
     transform: scale(0);
     pointer-events: none;
     cursor: default;

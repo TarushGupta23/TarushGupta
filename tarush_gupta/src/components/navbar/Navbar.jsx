@@ -4,8 +4,7 @@ export default function Navbar({ setCameraIndex, cameraIndex }) {
     const navIcons = [
         "home", "cup", "resume", "laptop", "mobile", "calendar", "trophy", "testimonial", "mail", "credits",
     ]
-
-    return <nav>
+    return <nav className={cameraIndex===9?'active' : ''}>
         <div className="navWrapper">
             <ul>
                 {

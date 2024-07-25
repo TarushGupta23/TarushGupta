@@ -27,7 +27,6 @@ export default function Camera({ cameraIndex }) {
     //     c: {value: 0, min: -2*Math.PI, max: +2*Math.PI, step: 0.01}
     // })
     
-    
     useEffect(() => {   
         const handleMouseMove = (event) => {
             if (cameraIndex !== 0) {
@@ -62,7 +61,7 @@ export default function Camera({ cameraIndex }) {
         ref={cameraGrp}
         position={[0, 0, 0]} 
         rotation={[0, 0, 0]}
-        // position={[x, y, z]}
+        // position={[x+.35, y-13-4.6, z-52.7]}
         >
         <group ref={cameraInnerGrp} >
             <PerspectiveCamera 
