@@ -11,12 +11,15 @@ import Camera  from "./components/3d/Camera";
 import Model from './components/3d/Model'
 import { dataLen, paths } from "./data";
 import CreditsHtml from "./components/credits/CreditsHtml";
+import ResumeHtml from "./components/resume/ResumeHtml";
+import {Perf} from 'r3f-perf'
 
 let isScrolling = false;
 let transitionTimeout;
 
 function DesktopExperience() {
     const [cameraIndex, setCameraIndex] = useState(0);
+    const [docLocation, setDocLocation] = useState(0);
     const { progress } = useProgress()
 
     useEffect(() => {
@@ -32,7 +35,7 @@ function DesktopExperience() {
             if (i === cameraIndex) {
                 console.log('Already at destination')
             } else {
-                setCameraIndex()
+                setCameraIndex(i)
             }
         }
     }
@@ -88,13 +91,14 @@ function DesktopExperience() {
         <Navbar setCameraIndex={setCameraIndex} cameraIndex={cameraIndex} />
 
         <Canvas>
+            <Perf />
             <Camera cameraIndex={cameraIndex} />
         
             <OrbitControls enabled={cameraIndex===0} makeDefault enableZoom={false} enablePan={false} minPolarAngle={0} maxPolarAngle={Math.PI * 0.55} />
 
             <Suspense fallback={null}>
                 <Environment background files={'backgrounds/map.hdr'} backgroundRotation={[0, Math.PI, 0]} environmentRotation={[0, Math.PI, 0]} environmentIntensity={.7} />
-                <Model cameraIndex={cameraIndex} setCameraIndex={setCameraIndex}/>
+                <Model {...{ cameraIndex, setCameraIndex, docLocation }}/>
             </Suspense>
         </Canvas>
 
@@ -103,6 +107,7 @@ function DesktopExperience() {
         <ComputerHtml idx={cameraIndex} />
         <AlexaHtml idx={cameraIndex} />
         <CreditsHtml idx={cameraIndex} />
+        <ResumeHtml idx={cameraIndex} {...{ docLocation, setDocLocation }}  />
     </>
 }
 

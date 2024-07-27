@@ -1,0 +1,48 @@
+.resumeContainer {
+    z-index: var(--html-z);
+    position: absolute;
+    top: 0; left: 0;
+    height: 100vh; width: 100vw;
+    transition: all .6s ease;
+}
+.resumeWrapper a {
+    text-decoration: none;
+}
+.resumeWrapper {
+    position: absolute;
+    left: 50%; top: 95%;
+    transform: translate(-50%, -50%);
+    display: flex; gap: .3rem;
+    align-items: center; justify-content: center;
+}
+.resumeContainer .btn.download {
+    width: 150px;
+    padding: .6rem;
+}
+.resumeContainer .btn {
+    display: flex; gap: .4rem;
+    align-items: center; justify-content: center;
+    background: linear-gradient(140deg, #3a3f49, var(--secondary),  #191c21);
+    border-radius: 12px;
+    cursor: pointer;
+    /* opacity: .6; */
+}
+.resumeContainer .btn.navigation { 
+    height: 2rem; width: 2rem;
+}
+.resumeContainer .btn img { 
+    height: 1.2rem; 
+    filter: brightness(1.8);
+}
+.resumeContainer .btn.download:hover {
+    background: linear-gradient(140deg, var(--primary),  var(--primary-dark), #002f45);
+}
+.resumeContainer .btn.disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+.resumeContainer.hidden {
+    top: 100%;
+    opacity: 0;
+    pointer-events: none;
+}

@@ -1,6 +1,5 @@
 import { Clone, useGLTF, useTexture } from '@react-three/drei';
 import { DoubleSide, SRGBColorSpace } from 'three';
-import { useControls } from 'leva'
 
 export default function Table() {
     const model = useGLTF('./models/Table.glb');
@@ -13,7 +12,7 @@ export default function Table() {
             <planeGeometry />
             <meshBasicMaterial side={DoubleSide} map={floor} alphaMap={floorAlpha} transparent={true} />
         </mesh>
-        <mesh position-y={-8.44} rotation-x={-Math.PI/2} scale={18}>
+        <mesh position={[0, -8.44, 0]} rotation-x={-Math.PI/2} scale={18}>
             <planeGeometry />
             <meshBasicMaterial map={carpet} alphaMap={carpetAlpha} transparent={true} />
         </mesh>
