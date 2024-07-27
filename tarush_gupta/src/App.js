@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import DesktopExperience from "./DesktopExperience";
-import PhoneExperience from "./PhoneExperience";
+// import PhoneExperience from "./PhoneExperience";
 import { consoleMsg } from "./data";
-import { Canvas } from "@react-three/fiber";
 
 export default function App() {
     // const [isDesktop, setIsDesktop] = useState(true)
