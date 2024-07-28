@@ -1,0 +1,61 @@
+section#calenderScreen {
+    width: 440px; height: 260px;
+    transform: translateY(10px);
+    pointer-events: none;
+}
+section#calenderScreen ul {
+    height: 100%; width: 100%;
+    position: relative;
+}
+section#calenderScreen li {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    display: flex; flex-direction: column;
+    gap: .5rem; 
+    background: rgb(235, 235, 245);
+    padding: .8rem;
+    overflow: hidden;
+}
+.calenderPage.invisible {
+    transition: all 1s ease;
+    opacity: 0;
+}
+.calenderPage.visible { 
+    transition: all 1s ease;
+    transition-delay: 2s;
+    opacity: 1 !important; 
+}
+.calenderPage .calenderContent {
+    position: relative;
+    margin: 1rem; flex: 1;
+    border: 4px solid var(--primary);
+    color: black;
+    padding: 1.2rem 1rem;
+    font-size: .8rem;
+}
+
+.calenderPage .calenderContent span {
+    position: absolute;
+    color: var(--primary-dark);
+    font-weight: bold; letter-spacing: .05rem;
+    background-color: rgb(235, 235, 245);
+    padding: 8px 10px; 
+}
+
+.calenderPage .calenderContent span.calenderStart {
+    transform: translate(0%, -50%);
+    top: 0;left: -6%;
+}
+.calenderPage .calenderContent span.calenderEnd {
+    transform: translate(0%, 50%);
+    bottom: 0%; right: -6%;
+}
+.calenderTitle {
+    font-size: 1.2rem;
+    background: linear-gradient(0deg, var(--primary),  var(--primary-dark));
+    width: fit-content;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}

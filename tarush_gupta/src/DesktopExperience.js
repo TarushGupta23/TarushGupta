@@ -17,6 +17,7 @@ import CalenderHtml from "./components/calender/CalenderHtml";
 
 let isScrolling = false;
 let transitionTimeout;
+const str = 'Loading-------------';
 
 function DesktopExperience() {
     const [cameraIndex, setCameraIndex] = useState(0);
@@ -25,7 +26,12 @@ function DesktopExperience() {
     const { progress } = useProgress()
 
     useEffect(() => {
-        if (progress == 100) { setCameraIndex(1) }
+        const lengthToInclude = Math.floor((progress / 100) * str.length);
+        document.title = str.slice(0, lengthToInclude) + '>';
+        if (progress == 100) { 
+            setCameraIndex(1) 
+            document.title = 'Tarush Gupta';
+        }
     }, [progress])
 
     window.pwd = () => { console.log(`TarushGupta/potfolioWebsite/${paths[cameraIndex]}`) }
@@ -93,13 +99,13 @@ function DesktopExperience() {
         <Navbar setCameraIndex={setCameraIndex} cameraIndex={cameraIndex} />
 
         <Canvas flat gl={{antialias: false}}>
-            <Perf />
+            <Perf position='top-left'/>
             <Camera cameraIndex={cameraIndex} />
         
             <OrbitControls enabled={cameraIndex===0} makeDefault enableZoom={false} enablePan={false} minPolarAngle={0} maxPolarAngle={Math.PI * 0.55} />
 
             <Suspense fallback={null}>
-                <Environment background files={'backgrounds/map.hdr'} backgroundRotation={[0, Math.PI, 0]} environmentRotation={[0, Math.PI, 0]} environmentIntensity={.7} />
+                <Environment background files={'backgrounds/map.hdr'} backgroundRotation={[0, 0.79, 0]} environmentRotation={[0, 0.79, 0]} />
                 <Model {...{ cameraIndex, setCameraIndex, docLocation, eventLoc }}/>
             </Suspense>
         </Canvas>
