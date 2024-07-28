@@ -21,6 +21,7 @@ let transitionTimeout;
 function DesktopExperience() {
     const [cameraIndex, setCameraIndex] = useState(0);
     const [docLocation, setDocLocation] = useState(0);
+    const [eventLoc, setEventLoc] = useState(0);
     const { progress } = useProgress()
 
     useEffect(() => {
@@ -99,7 +100,7 @@ function DesktopExperience() {
 
             <Suspense fallback={null}>
                 <Environment background files={'backgrounds/map.hdr'} backgroundRotation={[0, Math.PI, 0]} environmentRotation={[0, Math.PI, 0]} environmentIntensity={.7} />
-                <Model {...{ cameraIndex, setCameraIndex, docLocation }}/>
+                <Model {...{ cameraIndex, setCameraIndex, docLocation, eventLoc }}/>
             </Suspense>
         </Canvas>
 
@@ -109,7 +110,7 @@ function DesktopExperience() {
         <AlexaHtml idx={cameraIndex} />
         <CreditsHtml idx={cameraIndex} />
         <ResumeHtml idx={cameraIndex} {...{ docLocation, setDocLocation }}  />
-        <CalenderHtml idx={cameraIndex} />
+        <CalenderHtml idx={cameraIndex} {...{ eventLoc, setEventLoc }} />
     </>
 }
 

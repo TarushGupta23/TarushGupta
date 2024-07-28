@@ -1,20 +1,13 @@
 import { useEffect, useState } from 'react'
 import './alexa.css'
+import { testimonials as list } from '../../data'
 
 export default function AlexaHtml({ idx }) {
     const [speechIdx, setSpeechIdx] = useState(0)
-    const list = [
-        { by: 'DP tripathi', position: 'Diputy Librarian, NIT Jalandhar', text: ` to amaze me. It's inspiring to see someone so consistently go above and beyond. Your determination and perseverance are truly commendable. ` },
-        { by: 'Tarush Gupta', position: 'Diputy Librarian, NIT Jalandhar', text: ` to amaze me. It's inspiring to see someone so consistently go above and beyond. Your determination and perseverance are truly commendable. ` },
-        { by: 'ABC', position: 'Diputy Librarian, NIT Jalandhar', text: ` to amaze me. It's inspiring to see someone so consistently go above and beyond. Your determination and perseverance are truly commendable. ` },
-        { by: 'xYZ', position: 'Diputy Librarian, NIT Jalandhar', text: ` to amaze me. It's inspiring to see someone so consistently go above and beyond. Your determination and perseverance are truly commendable. ` },
-        { by: 'hi hi hi', position: 'Diputy Librarian, NIT Jalandhar', text: ` to amaze me. It's inspiring to see someone so consistently go above and beyond. Your determination and perseverance are truly commendable. ` },
-        { by: 'ha', position: 'Diputy Librarian, NIT Jalandhar', text: ` to amaze me. It's inspiring to see someone so consistently go above and beyond. Your determination and perseverance are truly commendable. ` }
-    ]
 
     useEffect(() => {
         let timeoutId;
-        if (idx === 7) {
+        if (idx === 7 && list.length != 1) {
             timeoutId = setTimeout(() => {
                 const newIdx = (speechIdx+1)%(list.length);
                 setSpeechIdx(newIdx)
@@ -46,10 +39,13 @@ export default function AlexaHtml({ idx }) {
                 </div>
             })
         }
-        <div className={idx===7? "navigation" : "hidden navigation"}>
-            {[...Array(list.length)].map((_, index) => {
-                return <span key={index} className={speechIdx === index ? "active" : ""} onClick={() => setSpeechIdx(index)} />
-            })}
-        </div>
+        {
+            list.length != 1 && 
+            <div className={idx===7? "navigation" : "hidden navigation"}>
+                {
+                    [...Array(list.length)].map((_, index) => (<span key={index} className={speechIdx === index ? "active" : ""} onClick={() => setSpeechIdx(index)} />))
+                }
+            </div>
+        }
     </div>
 }

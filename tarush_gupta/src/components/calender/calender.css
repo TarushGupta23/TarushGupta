@@ -16,8 +16,7 @@
     transform: translate(-50%, -50%);
     left: 50%; bottom: 8%;
     background-color: var(--secondary);
-    display: flex; 
-    gap: .6rem;
+    display: flex; gap: .6rem;
     padding: 0px .8rem;
     border-radius: 1000px;
 }

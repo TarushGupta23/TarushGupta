@@ -91,15 +91,15 @@
     transform: translate(-50%, -50%);
     left: 50%; bottom: 8%;
     background-color: var(--secondary);
-    display: flex; gap: .2rem;
-    padding: 0px .6rem;
+    display: flex; gap: .6rem;
+    padding: 0px .8rem;
     border-radius: 1000px;
 }
 .alexaContainer .navigation span {
     height: .8rem; width: .8rem;
     border-radius: 100%;
     border: 2px solid var(--primary);
-    margin: .6rem;
+    margin: .6rem 0rem;
     transition: all .4s ease;
 }
 .alexaContainer .navigation span.active {

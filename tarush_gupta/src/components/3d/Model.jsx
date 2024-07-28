@@ -10,7 +10,7 @@ import Trophies from './models/Trophies'
 import Resume from './models/Resume'
 import Drone from './models/Drone'
 
-export default function Model({cameraIndex, setCameraIndex, docLocation}) {
+export default function Model({cameraIndex, setCameraIndex, docLocation, eventLoc}) {
     return <>
         <Computer idx={cameraIndex} setIdx={setCameraIndex} />
         <Alexa idx={cameraIndex} setIdx={setCameraIndex} />
@@ -19,7 +19,7 @@ export default function Model({cameraIndex, setCameraIndex, docLocation}) {
         <Table />
         <Books />
         <Letter idx={cameraIndex}setIdx={setCameraIndex} />
-        <Calander idx={cameraIndex} setIdx={setCameraIndex} />
+        <Calander idx={cameraIndex} setIdx={setCameraIndex} eventLoc={eventLoc}/>
         <Trophies idx={cameraIndex} setIdx={setCameraIndex} />
         <Resume idx={cameraIndex} setIdx={setCameraIndex} docLocation={docLocation} />
         <Drone idx={cameraIndex}setIdx={setCameraIndex} />

@@ -112,7 +112,8 @@ const achievements = [
 
 ]
 const testimonials = [
-    {}
+    // { by: '', position: '', text: '' },
+    { by: 'DP tripathi', position: 'Diputy Librarian, NIT Jalandhar', text: ` to amaze me. It's inspiring to see someone so consistently go above and beyond. Your determination and perseverance are truly commendable. `, img: 'dp-tripathi' },
 ]
 
 export { dataLen, cameraPath, consoleMsg, paths, webProjects, androidProjects, homeCamera, events, achievements, testimonials }
