@@ -13,6 +13,7 @@ import { dataLen, paths } from "./data";
 import CreditsHtml from "./components/credits/CreditsHtml";
 import ResumeHtml from "./components/resume/ResumeHtml";
 import {Perf} from 'r3f-perf'
+import CalenderHtml from "./components/calender/CalenderHtml";
 
 let isScrolling = false;
 let transitionTimeout;
@@ -108,6 +109,7 @@ function DesktopExperience() {
         <AlexaHtml idx={cameraIndex} />
         <CreditsHtml idx={cameraIndex} />
         <ResumeHtml idx={cameraIndex} {...{ docLocation, setDocLocation }}  />
+        <CalenderHtml idx={cameraIndex} />
     </>
 }
 

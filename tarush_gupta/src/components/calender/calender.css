@@ -1,0 +1,33 @@
+.calenderContainer {
+    z-index: var(--html-z);
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: flex;
+    align-items: center; justify-content: center;
+    background-image: radial-gradient(circle farthest-corner at center bottom, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, .8));
+}
+.calenderContainer.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.calenderContainer .navigation {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%; bottom: 8%;
+    background-color: var(--secondary);
+    display: flex; 
+    gap: .6rem;
+    padding: 0px .8rem;
+    border-radius: 1000px;
+}
+.calenderContainer .navigation span {
+    height: .8rem; width: .8rem;
+    border-radius: 100%;
+    border: 2px solid var(--primary);
+    margin: .6rem 0rem;
+    transition: all .4s ease;
+}
+.calenderContainer .navigation span.active {
+    background-color: var(--primary);
+}

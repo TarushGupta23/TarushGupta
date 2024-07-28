@@ -1,9 +1,8 @@
-import { PerspectiveCamera, useHelper } from "@react-three/drei";
-import { cameraPath } from "../../data";
 import { useEffect, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { CameraHelper, Vector3 } from "three";
-import { useControls } from'leva'
+import { PerspectiveCamera } from "@react-three/drei";
+import { Vector3 } from "three";
+import { cameraPath, homeCamera } from "../../data";
 
 const cameraRotation = new Vector3().copy(cameraPath[0].rotation)
 const cameraPosition = new Vector3(-0.35, 17.6, 52.7)
@@ -64,7 +63,7 @@ export default function Camera({ cameraIndex }) {
         >
         <group ref={cameraInnerGrp} >
             <PerspectiveCamera 
-                position={[-0.35, 17.6, 52.7]} 
+                position={homeCamera} 
                 ref={camera}
                 makeDefault 
                 fov='30'
