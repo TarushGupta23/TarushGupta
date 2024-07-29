@@ -83,14 +83,14 @@ const consoleMsg = `
 
 // -------------- CHANGING DATA --------------
 const webProjects = [
-    // { liId: '', name: '', repoLink: '', tech: [], liveLink: '', desc: ''},
-    { liId: 'atlas-game' , name: 'Atlas Game', repoLink: 'https://github.com/TarushGupta23/ATLAS_GAME', tech: ['react', 'socketio', 'pgsql'], liveLink: 'https://atlas-game.vercel.app', desc: 'An interactive web app built with React and Socket.IO, featuring a custom Express server and API, both developed by me, and a PostgreSQL database for efficient data management.' },
-    { liId: 'parking-mngmnt-sys' , name: 'Parking Management system', repoLink: 'https://github.com/TarushGupta23/Parking-Management-System', tech: ['php', 'css'], liveLink: '', desc: 'A comprehensive database management system for efficient and organized parking management. The system is built using HTML, CSS, JavaScript, and PHP, providing a user-friendly interface.' },
-    { liId: 'iota-website' , name: 'Iota Website', repoLink: '', tech: ['css'], liveLink: '', desc: 'Official Website of Iota Club (media cell of college)' },
-    // { liId: 'library proj', name: '', repoLink: '', tech: [], liveLink: '', desc: ''},
+    // { liId: '', name: '', repoLink: '', tech: [], liveLink: '', desc: '', imgs: 0},
+    { liId: 'atlas-game' , name: 'Atlas Game', repoLink: 'https://github.com/TarushGupta23/ATLAS_GAME', tech: ['react', 'socketio', 'pgsql'], liveLink: 'https://atlas-game.vercel.app', desc: 'An interactive web app built with React and Socket.IO, featuring a custom Express server and API, both developed by me, and a PostgreSQL database for efficient data management.', imgs: 3 },
+    { liId: 'parking-mngmnt-sys' , name: 'Parking Management system', repoLink: 'https://github.com/TarushGupta23/Parking-Management-System', tech: ['php', 'css'], liveLink: '', desc: 'A comprehensive database management system for efficient and organized parking management. The system is built using HTML, CSS, JavaScript, and PHP, providing a user-friendly interface.', imgs: 3 },
+    { liId: 'iota-website' , name: 'Iota Website', repoLink: 'https://github.com/SdSingh10/iota_official_website', tech: ['css'], liveLink: '', desc: 'Official Website of Iota Club (media cell - NITJ). This club empowers students through inclusive, innovative learning. Focused on leadership and interdisciplinary studies', imgs: 1 },
+    { liId: 'library-proj', name: 'Book Management system', repoLink: 'https://github.com/TarushGupta23/LibraryBookStore', tech: ['php', 'css'], liveLink: '', desc: 'A web application designed to streamline the process of managing and accessing library resources. It enables students to search through all the books available in their library and filter them.', imgs: 2},
 ]
 const androidProjects = [
-    // { liId: '', name: '', repoLink: '', tech: [], liveLink: '', desc: ''},
+    // { liId: '', name: '', repoLink: '', tech: [], liveLink: '', desc: '', imgs: 0},
     { liId: 'x-change', name: 'Xchange', repoLink: 'https://github.com/TarushGupta23/X-change', tech: ['java', 'firebase'], liveLink: '', desc: 'Xchange promotes a payment-free environment where users can exchange items they no longer need for items they desire, fostering a sense of community and sustainability'},
     { liId: 'my-pages', name: 'MyPages', repoLink: 'https://github.com/TarushGupta23/MyPages', tech: ['sqlite', 'java', 'firebase'], liveLink: '', desc: 'Java-based application that offers a variety of features to enhance your productivity and creativity.'},
     { liId: 'attendence-tracker', name: 'AttendenceTracker', repoLink: 'https://github.com/TarushGupta23/AttendenceTrackerApp', tech: ['kotlin', 'firebase'], liveLink: '', desc: 'A project created under GDSC (Google Developer Student Clubs). This app is designed to help users keep track of their attendance for multiple subjects conveniently.'},
@@ -98,18 +98,24 @@ const androidProjects = [
 
 const events = [
     // {start: '', end: '', content: '', title: ''},
-    { start: '2018', end: '2022', content: '', title: 'High School Degree' },
-    { start: '---', end: 'Till Date', content: '', title: "Bachelor's Degree" },
-    { start: '---', end: '---', content: '', title: "Online Courses"}, 
-    { start: 'Oct 2023', end: 'Till Date', content: '', title: 'Android Team Member : GDSC' },
-    { start: 'Nov 2023', end: 'Till Date', content: '', title: 'Android Team Head : IOTA' },
+    // wrap content in <div> and highlighted part in <span>
+    { start: '2018', end: '2022', title: 'High School Degree', content: 
+        <div>I graduated with a high school degree in the <span>Non-Medical stream</span> from <span>Police DAV Public School, Ludhiana</span>. My education there focused on providing a strong foundation in analytical and problem-solving skills, and preparing me for further studies and career opportunities in technical fields.</div>
+    }, { start: 'Oct 2022', end: 'Till Date', title: "Bachelor's Degree", content: 
+        <div>I am currently pursuing a Bachelor's degree in <span>Information Technology</span> from <span>Dr. B.R. Ambedkar National Institute of Technology Jalandhar</span>. This program equips me with in-depth knowledge and practical skills in software development, data management, and network security, preparing me for a dynamic career in the IT industry.</div>
+    }, { start: 'Nov 2023', end: 'Dec 2023',  title: "Online Courses", content: 
+        <div>I have completed several online courses to enhance my technical skills, including <span>Data Structures and Algorithms in Java</span> from the Alpha Course by Apna College, <span>Android Development</span> from Oak Academy on Udemy, <span>MERN Development</span> from a Udemy course by Dr. Angela Yu, and <span>Three.js</span> from the ThreeJs Journey by Bruno Simon.</div>
+    }, { start: 'Oct 2023', end: 'Till Date', title: 'Android Team Member : GDSC', content: 
+        <div>As a member of the <span>Android Development team in the GDSC club</span> at my college, I have enhanced my technical skills and collaboration abilities. This role has allowed me to work on innovative projects, stay updated with the latest Android advancements, and contribute to a vibrant tech community, fostering my growth as a proficient and dynamic developer.</div>
+    }, { start: 'Nov 2023', end: 'Till Date', title: 'Android Team Head : IOTA', content: 
+        <div>I am the <span>lead of the Android Development team</span> and a <span>core member of the Web Development team in IOTA</span>, the media cell of my college. This dual role has allowed me to refine my leadership and technical skills, work on diverse projects, and contribute significantly to both Android and web development initiatives, fostering a comprehensive growth in my abilities as a developer.</div>
+    },
 ]
 const achievements = [
     // { title: '', desc: ''},
     { title: 'Supervisor : Hackmol 5.0', desc: '' },
-    // yt session in gdsc
-    // IR IT !!
-
+    { title: 'yt session', desc: ''},
+    { title: 'Internship Representative : NITJ - IT', desc: ''}
 ]
 const testimonials = [
     // { by: '', position: '', text: '' },

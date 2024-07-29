@@ -5,13 +5,17 @@ export default function ComputerHtml({idx}) {
 
     const handleMouseOver = (id) => {
         const elem = document.getElementById(id);
-        elem.classList.remove('invisible')
-        elem.classList.add('visible')
+        if (elem) {
+            elem.classList.remove('invisible')
+            elem.classList.add('visible')
+        }
     }
     const handleMouseOut = (id) => {
         const elem = document.getElementById(id);
-        elem.classList.remove('visible')
-        elem.classList.add('invisible')
+        if (elem) {
+            elem.classList.remove('visible')
+            elem.classList.add('invisible')
+        }
     }
 
     const renderWebList = () => {

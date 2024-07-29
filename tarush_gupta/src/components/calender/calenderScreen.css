@@ -18,12 +18,12 @@ section#calenderScreen li {
     overflow: hidden;
 }
 .calenderPage.invisible {
-    transition: all 1s ease;
+    transition: all .5s ease;
     opacity: 0;
 }
 .calenderPage.visible { 
-    transition: all 1s ease;
-    transition-delay: 2s;
+    transition: all .5s ease;
+    transition-delay: 1s;
     opacity: 1 !important; 
 }
 .calenderPage .calenderContent {
@@ -35,7 +35,7 @@ section#calenderScreen li {
     font-size: .8rem;
 }
 
-.calenderPage .calenderContent span {
+.calenderPage .calenderContent span.date {
     position: absolute;
     color: var(--primary-dark);
     font-weight: bold; letter-spacing: .05rem;
@@ -58,4 +58,10 @@ section#calenderScreen li {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
+}
+.calenderContent div { color: black; }
+.calenderContent div span { 
+    color: black; 
+    /* font-style: italic;  */
+    font-weight: bold;
 }

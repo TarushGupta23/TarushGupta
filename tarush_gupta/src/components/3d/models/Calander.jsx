@@ -15,7 +15,7 @@ export default function Calander({ idx, setIdx, eventLoc }) {
     useEffect(() => {
         const actionFwd = animation.actions['Fwd']
         const actionBwd = animation.actions['Bwd']
-        const timeScale = 1.5
+        const timeScale = 2.5
 
         if (initPos.current < eventLoc && actionFwd) {
             actionFwd.timeScale = timeScale

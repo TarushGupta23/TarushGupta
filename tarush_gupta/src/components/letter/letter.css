@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Playwrite+CU:wght@100..400&display=swap');
-
 section.letterContainer {
     display: flex; flex-direction: column;
     height: 200px; width: 400px;
@@ -49,7 +47,7 @@ section.letterContainer form div input, section.letterContainer form div textare
     font-size: .5rem;
     border-bottom: 1px solid var(--secondary);
     padding: 2px 8px;
-    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-family: monospace;
 }
 section.letterContainer form div input::spelling-error, section.letterContainer form div textarea::spelling-error,
 section.letterContainer form div input::grammar-error, section.letterContainer form div textarea::grammar-error {
