@@ -23,7 +23,7 @@ export default function AlexaHtml({ idx }) {
                 const position = index%2 == 0 ? 'left' : 'right';
                 return <div className={`${isHidden} ${position} speechBox`} key={index}>
                     <div className="imageCover">
-                        <img src="" alt="" />
+                        <img src={`./testimonialProfiles/${speech.img}.png`} alt="" />
                     </div>
                     <div>
                         <div className="speech">

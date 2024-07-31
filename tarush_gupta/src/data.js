@@ -9,7 +9,7 @@ const rawPath = [
         position: [-0.35, 13 + 4.6, 52.7], 
         rotation: [-.33, 0, 0]
     }, { // cupView - 1
-        position: [4.605, -3.2 + 4.6, 9.45], 
+        position: [4.605, 1.4, 9.45], 
         rotation: [-0.1, 0, 0], 
     }, { // resume - 2
         position: [-0.415, 2.95, 6.74], 
@@ -24,8 +24,8 @@ const rawPath = [
         position: [-1.055, 4.6-2.59, 6.22], 
         rotation: [-.07, .66, .06]
     }, { // trophies - 6
-        position: [-.45, 2.97, -2.4], 
-        rotation: [-.75, -1.43, -.79], 
+        position: [5.00, 3.25, 5], 
+        rotation: [-.15, -.2, 0], 
     }, { // alexa - 7
         position: [-10.025, 4.6-2.63, 6.97], 
         rotation: [-.22, -.74, -.11], 
@@ -91,9 +91,9 @@ const webProjects = [
 ]
 const androidProjects = [
     // { liId: '', name: '', repoLink: '', tech: [], liveLink: '', desc: '', imgs: 0},
-    { liId: 'x-change', name: 'Xchange', repoLink: 'https://github.com/TarushGupta23/X-change', tech: ['java', 'firebase'], liveLink: '', desc: 'Xchange promotes a payment-free environment where users can exchange items they no longer need for items they desire, fostering a sense of community and sustainability'},
-    { liId: 'my-pages', name: 'MyPages', repoLink: 'https://github.com/TarushGupta23/MyPages', tech: ['sqlite', 'java', 'firebase'], liveLink: '', desc: 'Java-based application that offers a variety of features to enhance your productivity and creativity.'},
-    { liId: 'attendence-tracker', name: 'AttendenceTracker', repoLink: 'https://github.com/TarushGupta23/AttendenceTrackerApp', tech: ['kotlin', 'firebase'], liveLink: '', desc: 'A project created under GDSC (Google Developer Student Clubs). This app is designed to help users keep track of their attendance for multiple subjects conveniently.'},
+    { liId: 'x-change', name: 'Xchange', repoLink: 'https://github.com/TarushGupta23/X-change', tech: ['java', 'firebase'], liveLink: '', desc: 'Xchange promotes a payment-free environment where users can exchange items they no longer need for items they desire, fostering a sense of community and sustainability', imgs: 4},
+    { liId: 'my-pages', name: 'MyPages', repoLink: 'https://github.com/TarushGupta23/MyPages', tech: ['sqlite', 'java', 'firebase'], liveLink: '', desc: 'Java-based application that offers a variety of features to enhance your productivity and creativity.', imgs: 8 },
+    { liId: 'attendence-tracker', name: 'AttendenceTracker', repoLink: 'https://github.com/TarushGupta23/AttendenceTrackerApp', tech: ['kotlin', 'firebase'], liveLink: '', desc: 'A project created under GDSC (Google Developer Student Clubs). This app is designed to help users keep track of their attendance for multiple subjects conveniently.', imgs: 2},
 ]
 
 const events = [
@@ -119,7 +119,7 @@ const achievements = [
 ]
 const testimonials = [
     // { by: '', position: '', text: '' },
-    { by: 'DP tripathi', position: 'Diputy Librarian, NIT Jalandhar', text: ` to amaze me. It's inspiring to see someone so consistently go above and beyond. Your determination and perseverance are truly commendable. `, img: 'dp-tripathi' },
+    { by: 'DP tripathi', position: 'Diputy Librarian, NIT Jalandhar', text: `Mr. Tarush Gupta's outstanding work on our new online journal management portal has greatly improved our journal access and research productivity. His dedication and expertise are truly commendable. Thank you, Tarush, for your exceptional contributions.`, img: 'dp-tripathi' },
 ]
 
 export { dataLen, cameraPath, consoleMsg, paths, webProjects, androidProjects, homeCamera, events, achievements, testimonials }

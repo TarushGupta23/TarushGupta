@@ -3,6 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
 import { Vector3 } from "three";
 import { cameraPath, homeCamera } from "../../data";
+// import { useControls } from 'leva'
 
 const cameraRotation = new Vector3().copy(cameraPath[0].rotation)
 const cameraPosition = new Vector3(-0.35, 17.6, 52.7)
@@ -18,9 +19,9 @@ export default function Camera({ cameraIndex }) {
     }, [camera])
     
     // const {x, y, z, a, b, c} = useControls('camera', {
-    //     x: {value: 0, min: -100, max: 100, step: 0.01},
-    //     y: {value: 0, min: -100, max: 30, step: 0.01},
-    //     z: {value: 0, min: -100, max: 30, step: 0.01},
+    //     x: {value: -.45, min: -100, max: 100, step: 0.01},
+    //     y: {value: 2.97, min: -100, max: 30, step: 0.01},
+    //     z: {value: -2.4, min: -100, max: 30, step: 0.01},
     //     a: {value: 0, min: -2*Math.PI, max: +2*Math.PI, step: 0.01},
     //     b: {value: 0, min: -2*Math.PI, max: +2*Math.PI, step: 0.01},
     //     c: {value: 0, min: -2*Math.PI, max: +2*Math.PI, step: 0.01}
@@ -59,6 +60,7 @@ export default function Camera({ cameraIndex }) {
     return <group 
         ref={cameraGrp}
         position={[0, 0, 0]} 
+        // position={[x+.35, y-17.6, z-52.7]} 
         rotation={[0, 0, 0]}
         >
         <group ref={cameraInnerGrp} >
@@ -69,6 +71,7 @@ export default function Camera({ cameraIndex }) {
                 fov='30'
                 near={2}
                 far={80}
+                // rotation={[a, b, c]}
             />
         </group>
     </group>

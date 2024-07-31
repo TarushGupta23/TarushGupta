@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { webProjects, androidProjects } from '../../data'
 import './computer.css'
 
@@ -55,6 +56,44 @@ export default function ComputerHtml({idx}) {
             </li>
         ))
     }
+
+    useEffect(() => {
+        let timeoutId = [];
+        if (idx === 4) {
+            androidProjects.forEach((item, index) => {
+                let currImg = 0
+                timeoutId[index] = setInterval(() => {
+                    const projLi = document.querySelectorAll(`.imgs-${item.liId} .proj-img`)
+                    projLi.forEach((li) => {
+                        li.classList.remove('active')
+                    })
+                    projLi[currImg].classList.add('active')
+                    currImg = (currImg + 1) % item.imgs
+                    console.log(projLi)
+                }, 2500)
+            })
+        }
+        if (idx === 3) {
+            webProjects.forEach((item, index) => {
+                let currImg = 0
+                timeoutId[index] = setInterval(() => {
+                    const projLi = document.querySelectorAll(`.imgs-${item.liId} .proj-img`)
+                    projLi.forEach((li) => {
+                        li.classList.remove('active')
+                    })
+                    projLi[currImg].classList.add('active')
+                    currImg = (currImg + 1) % item.imgs
+                    console.log(projLi)
+                }, 2500)
+            })
+        }
+
+        return () => {
+            timeoutId.forEach((id) => {
+                clearInterval(id)
+            })
+        }
+    }, [idx])
 
     return <div className={idx===3 || idx===4? "computerContainer" : "computerContainer hidden"}>
         <div className="computerWrapper">

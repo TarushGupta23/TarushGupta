@@ -9,7 +9,7 @@ export default function CalenderHtml({ idx, eventLoc, setEventLoc }) {
             intervalId = setInterval(() => {
                 let i = (eventLoc+1) % events.length;
                 setEventLoc(i)
-            }, 8000)
+            }, 6000)
         }
         return () => { intervalId && clearInterval(intervalId) }
     }, [idx, eventLoc])
