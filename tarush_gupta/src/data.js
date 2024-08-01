@@ -97,25 +97,25 @@ const androidProjects = [
 ]
 
 const events = [
-    // {start: '', end: '', content: '', title: ''},
+    // {start: '', end: '', content: '', title: '', img: '},
     // wrap content in <div> and highlighted part in <span>
-    { start: '2018', end: '2022', title: 'High School Degree', content: 
+    { start: '2018', end: '2022', img: 'dav', title: 'High School Degree', content: 
         <div>I graduated with a high school degree in the <span>Non-Medical stream</span> from <span>Police DAV Public School, Ludhiana</span>. My education there focused on providing a strong foundation in analytical and problem-solving skills, and preparing me for further studies and career opportunities in technical fields.</div>
-    }, { start: 'Oct 2022', end: 'Till Date', title: "Bachelor's Degree", content: 
+    }, { start: 'Oct 2022', end: 'Till Date', img: 'nitj', title: "Bachelor's Degree", content: 
         <div>I am currently pursuing a Bachelor's degree in <span>Information Technology</span> from <span>Dr. B.R. Ambedkar National Institute of Technology Jalandhar</span>. This program equips me with in-depth knowledge and practical skills in software development, data management, and network security, preparing me for a dynamic career in the IT industry.</div>
-    }, { start: 'Nov 2023', end: 'Dec 2023',  title: "Online Courses", content: 
+    }, { start: 'Nov 2023', end: 'Dec 2023', img: 'certif', title: "Online Courses", content: 
         <div>I have completed several online courses to enhance my technical skills, including <span>Data Structures and Algorithms in Java</span> from the Alpha Course by Apna College, <span>Android Development</span> from Oak Academy on Udemy, <span>MERN Development</span> from a Udemy course by Dr. Angela Yu, and <span>Three.js</span> from the ThreeJs Journey by Bruno Simon.</div>
-    }, { start: 'Oct 2023', end: 'Till Date', title: 'Android Team Member : GDSC', content: 
+    }, { start: 'Oct 2023', end: 'Till Date', img: 'gdsc', title: 'Android Team Member : GDSC', content: 
         <div>As a member of the <span>Android Development team in the GDSC club</span> at my college, I have enhanced my technical skills and collaboration abilities. This role has allowed me to work on innovative projects, stay updated with the latest Android advancements, and contribute to a vibrant tech community, fostering my growth as a proficient and dynamic developer.</div>
-    }, { start: 'Nov 2023', end: 'Till Date', title: 'Android Team Head : IOTA', content: 
+    }, { start: 'Nov 2023', end: 'Till Date', img: 'nitj', title: 'Android Team Head : IOTA', content: 
         <div>I am the <span>lead of the Android Development team</span> and a <span>core member of the Web Development team in IOTA</span>, the media cell of my college. This dual role has allowed me to refine my leadership and technical skills, work on diverse projects, and contribute significantly to both Android and web development initiatives, fostering a comprehensive growth in my abilities as a developer.</div>
     },
 ]
 const achievements = [
     // { title: '', desc: ''},
-    { title: 'Supervisor : Hackmol 5.0', desc: '' },
-    { title: 'yt session', desc: ''},
-    { title: 'Internship Representative : NITJ - IT', desc: ''}
+    { title: 'Internship Representative : NIT Jalandhar', desc: 'As the Internship Representative for the IT branch at NIT Jalandhar, I facilitate internship opportunities for my peers, connecting them with industry professionals and coordinating recruitment activities.'},
+    { title: 'Supervisor : Hackmol 5.0', desc: 'I had the privilege of serving as a supervisor for Hackmol 5.0, organized by the Google Developer Student Clubs at my college. My role involved supporting teams, addressing any issues, and fostering a collaborative and innovative atmosphere throughout the hackathon.' },
+    { title: 'Live Session: Android Study Jams', desc: 'I conducted a live session on YouTube for Android Study Jams, organized by GDSC. In this session, I taught Android development using Kotlin and demonstrated how to build an attendance app.'},
 ]
 const testimonials = [
     // { by: '', position: '', text: '' },

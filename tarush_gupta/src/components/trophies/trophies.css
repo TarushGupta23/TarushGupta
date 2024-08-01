@@ -1,0 +1,73 @@
+.trophiesContainer {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: var(--html-z);
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .0) 50%);
+    transition: all .4s ease-in-out;
+}
+.trophiesContainer.hidden { 
+    opacity: 0;
+    pointer-events: none;
+}
+.trophiesContainer h2.title {
+    margin-top: 6rem;
+    font-size: 2.4rem;
+    align-self: flex-start;
+    padding: 1rem 2rem;
+    padding-right: 4rem;
+    background: linear-gradient(-30deg, var(--primary-dark), var(--primary));
+    width: fit-content;
+    position: relative;
+    border-top-right-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+    transition: all .4s ease-in-out;
+    left: 0;
+}
+.trophiesContainer.hidden h2.title {
+    left: -100%;
+}
+
+.trophiesContainer .trophiesWrapper { 
+    transition: all .4s ease-in-out;
+    left: 0;
+    position: relative;
+    width: 40%; 
+}
+.trophiesContainer.hidden .trophiesWrapper {
+    left: 100%;
+}  
+.trophiesWrapper ul {
+    display: flex; flex-direction: column;
+    height: 100%; width: 100%;
+    gap: 3rem;
+    padding: 8rem 4rem;
+}
+.trophiesWrapper li.achievement-item {
+    position: relative;
+    display: flex; flex-direction: column;
+    gap: .5rem;
+    
+}
+.trophiesWrapper li.achievement-item span {
+    position: absolute;
+    top: 0; left: 0;
+    height: 3.2rem; aspect-ratio: 1;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transform: translate(-50%, -40%);
+    background: linear-gradient(-30deg, var(--primary-dark), var(--primary));
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 74% 26% 38% 62% / 49% 26% 74% 51% ;
+}
+.trophiesWrapper li.achievement-item * {
+    text-align: justify;
+}
+.trophiesWrapper li.achievement-item h3 {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    width: fit-content;
+    color: var(--secondary);
+}

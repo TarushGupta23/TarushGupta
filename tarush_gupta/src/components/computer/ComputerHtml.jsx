@@ -69,7 +69,6 @@ export default function ComputerHtml({idx}) {
                     })
                     projLi[currImg].classList.add('active')
                     currImg = (currImg + 1) % item.imgs
-                    console.log(projLi)
                 }, 2500)
             })
         }
@@ -83,7 +82,6 @@ export default function ComputerHtml({idx}) {
                     })
                     projLi[currImg].classList.add('active')
                     currImg = (currImg + 1) % item.imgs
-                    console.log(projLi)
                 }, 2500)
             })
         }

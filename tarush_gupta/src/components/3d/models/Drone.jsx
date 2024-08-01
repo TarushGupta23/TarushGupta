@@ -24,8 +24,8 @@ const positions = [
         position: new Vector3(-5.5, 3.2, -4.6),
         rotation: new Vector3(.3, -3.8, 0),
     }, { // trophies
-        position: new Vector3(0, 0, 0),
-        rotation: new Vector3(0, 0, 0),
+        position: new Vector3(3.63, 2.60, -6.17),
+        rotation: new Vector3(0.22, -2.65, 0),
     }, { // alexa
         position: new Vector3(12, 4, -4),
         rotation: new Vector3(-.1, -3.4, 0),

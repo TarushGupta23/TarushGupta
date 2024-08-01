@@ -17,17 +17,11 @@ nav ul {
     overflow: hidden;
 }
 .navWrapper {
-    transition: all .2s ease;
     padding: .2rem;
     border-radius: 1000px;
     position: relative;
-    transform: scale(.6) translateY(-150%);
-    opacity: .4;
+    transform: scale(.8);
     background: linear-gradient(-30deg, white, var(--primary) 30%, var(--primary-dark));
-}
-nav:hover .navWrapper, nav.active .navWrapper { 
-    transform: scale(.8) translateY(0px);
-    opacity: 1;
 }
 nav ul li {
     border-radius: 1000px;

@@ -14,6 +14,7 @@ import CreditsHtml from "./components/credits/CreditsHtml";
 import ResumeHtml from "./components/resume/ResumeHtml";
 // import {Perf} from 'r3f-perf'
 import CalenderHtml from "./components/calender/CalenderHtml";
+import Trophies from "./components/trophies/Trophies";
 
 let isScrolling = false;
 let transitionTimeout;
@@ -117,6 +118,7 @@ function DesktopExperience() {
         <CreditsHtml idx={cameraIndex} />
         <ResumeHtml idx={cameraIndex} {...{ docLocation, setDocLocation }}  />
         <CalenderHtml idx={cameraIndex} {...{ eventLoc, setEventLoc }} />
+        <Trophies idx={cameraIndex} />
     </>
 }
 

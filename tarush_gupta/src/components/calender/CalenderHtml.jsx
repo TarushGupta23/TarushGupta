@@ -4,6 +4,14 @@ import './calender.css'
 
 export default function CalenderHtml({ idx, eventLoc, setEventLoc }) {
     useEffect(() => {
+        events.forEach((item) => {
+            const elem = document.getElementById("ipad-img-" + item.img)
+            elem && elem.classList.remove('active')
+        })
+
+        const elem = document.getElementById("ipad-img-" + events[eventLoc].img)
+        elem && elem.classList.add('active')
+
         let intervalId;
         if (idx === 5) {
             intervalId = setInterval(() => {

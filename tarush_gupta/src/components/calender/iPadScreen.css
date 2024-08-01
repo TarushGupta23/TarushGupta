@@ -1,0 +1,16 @@
+section#ipadScreen {
+    width: 265px; height: 355px;
+    pointer-events: none;
+    overflow: hidden;
+    position: relative;
+}
+
+section#ipadScreen img {
+    height: 100%; width: 100%;
+    position: absolute;
+    top: 0%; left: 0%;
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+
+section#ipadScreen img.active { opacity: 1; }
