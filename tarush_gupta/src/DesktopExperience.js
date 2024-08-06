@@ -12,7 +12,7 @@ import Model from './components/3d/Model'
 import { dataLen, paths } from "./data";
 import CreditsHtml from "./components/credits/CreditsHtml";
 import ResumeHtml from "./components/resume/ResumeHtml";
-// import {Perf} from 'r3f-perf'
+import {Perf} from 'r3f-perf'
 import CalenderHtml from "./components/calender/CalenderHtml";
 import Trophies from "./components/trophies/Trophies";
 
@@ -100,7 +100,7 @@ function DesktopExperience() {
         <Navbar setCameraIndex={setCameraIndex} cameraIndex={cameraIndex} />
 
         <Canvas flat gl={{antialias: false}}>
-            {/* <Perf position='top-left'/> */}
+            {/*<Perf position='top-left'/> */}
             <Camera cameraIndex={cameraIndex} />
         
             <OrbitControls enabled={cameraIndex===0} makeDefault enableZoom={false} enablePan={false} minPolarAngle={0.6} maxPolarAngle={Math.PI * 0.48} />

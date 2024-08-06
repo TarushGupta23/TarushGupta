@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import DesktopExperience from "./DesktopExperience";
-// import PhoneExperience from "./PhoneExperience";
 import { consoleMsg } from "./data";
+import PhoneExperience from "./PhoneExperience";
 
 export default function App() {
     // const [isDesktop, setIsDesktop] = useState(true)
+
     useEffect(() => {
         console.clear()
         console.log(consoleMsg)
@@ -24,6 +25,8 @@ export default function App() {
             window.removeEventListener('resize', handleResize)
         }
     }, [])
+
     // return isDesktop? <DesktopExperience /> : <PhoneExperience />
     return <DesktopExperience />
+    // return <PhoneExperience />
 }
