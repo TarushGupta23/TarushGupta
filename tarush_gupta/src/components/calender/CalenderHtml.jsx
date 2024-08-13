@@ -3,6 +3,7 @@ import { events } from "../../data"
 import './calender.css'
 
 export default function CalenderHtml({ idx, eventLoc, setEventLoc }) {
+
     useEffect(() => {
         events.forEach((item) => {
             const elem = document.getElementById("ipad-img-" + item.img)
@@ -21,11 +22,14 @@ export default function CalenderHtml({ idx, eventLoc, setEventLoc }) {
         }
         return () => { intervalId && clearInterval(intervalId) }
     }, [idx, eventLoc])
+
     return <div className={idx === 5?"calenderContainer":"calenderContainer hidden"}>
         <div className={"navigation"}>
+            <div className="btn b1" onClick={() => setEventLoc(i => ((i-1+events.length)%events.length) )}>&lt;</div>
             {[...Array(events.length)].map((_, index) => {
-                return <span key={index} className={eventLoc === index ? "active" : ""} onClick={() => setEventLoc(index)} />
+                return <span key={index} className={eventLoc === index ? "active" : ""} />
             })}
+            <div className="btn b2" onClick={() => setEventLoc(i => ((i+1)%events.length) )}>&gt;</div>
         </div>
     </div>
 }

@@ -20,8 +20,20 @@ nav ul {
     padding: .2rem;
     border-radius: 1000px;
     position: relative;
-    transform: scale(.8);
     background: linear-gradient(-30deg, white, var(--primary) 30%, var(--primary-dark));
+    transform: scale(.6);
+    opacity: .4;
+    transition: all .2s ease;
+}
+.navWrapper:hover, 
+nav.active .navWrapper {
+    opacity: 1;
+    transform: scale(.8);
+}
+nav.deactive .navWrapper {
+    transform: scale(.6) translateY(-100px);
+    opacity: 0;
+    pointer-events: none;
 }
 nav ul li {
     border-radius: 1000px;

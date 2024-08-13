@@ -7,7 +7,7 @@ import IpadScreen from '../../calender/IpadScreen';
 
 export default function Calander({ idx, setIdx, eventLoc }) {
     const model = useGLTF('./models/CalanderAnimation.glb');
-    model.scene.children[6].visible = false
+    // model.scene.children[6].visible = false
     const initPos = useRef(0)
 
     const clone = useRef()

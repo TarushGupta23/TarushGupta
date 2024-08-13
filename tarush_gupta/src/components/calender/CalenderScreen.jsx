@@ -7,7 +7,7 @@ export default function CalenderScreen({ calenderLoc, idx }) {
             <ul>
                 {
                     events.map((data, index) => {
-                        return <li className={index === calenderLoc? 'calenderPage visible' : 'calenderPage invisible'}>
+                        return <li className={index === calenderLoc? 'calenderPage visible' : 'calenderPage invisible'} key={index}>
                             <strong className="calenderTitle">{data.title}</strong>
                             <div className="calenderContent">
                                 <span className="calenderStart date">{data.start}</span>

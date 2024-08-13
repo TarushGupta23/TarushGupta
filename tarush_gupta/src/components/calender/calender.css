@@ -30,3 +30,19 @@
 .calenderContainer .navigation span.active {
     background-color: var(--primary);
 }
+.calenderContainer .navigation .btn {
+    position: absolute; top: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%; aspect-ratio: 1;
+    border-radius: 40%;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center; justify-content: center;
+    cursor: pointer;
+}
+.calenderContainer .navigation .b1 {
+    left: calc(0% - 1rem);
+}
+.calenderContainer .navigation .b2 {
+    left: calc(100% + 1rem);
+}
