@@ -7,7 +7,7 @@ div#modelIcon {
     cursor: pointer;
     overflow: hidden;
     transform: scale(1);
-    opacity: .4;
+    opacity: .6;
 }
 
 div#modelIcon div {

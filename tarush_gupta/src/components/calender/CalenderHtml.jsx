@@ -9,9 +9,11 @@ export default function CalenderHtml({ idx, eventLoc, setEventLoc }) {
             const elem = document.getElementById("ipad-img-" + item.img)
             elem && elem.classList.remove('active')
         })
-
-        const elem = document.getElementById("ipad-img-" + events[eventLoc].img)
-        elem && elem.classList.add('active')
+        
+        setTimeout(() => {
+            const elem = document.getElementById("ipad-img-" + events[eventLoc].img)
+            elem && elem.classList.add('active')
+        }, 100)
 
         let intervalId;
         if (idx === 5) {

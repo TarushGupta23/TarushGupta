@@ -12,7 +12,6 @@ import Model from './components/3d/Model'
 import { dataLen, paths } from "./data";
 import CreditsHtml from "./components/credits/CreditsHtml";
 import ResumeHtml from "./components/resume/ResumeHtml";
-import {Perf} from 'r3f-perf'
 import CalenderHtml from "./components/calender/CalenderHtml";
 import Trophies from "./components/trophies/Trophies";
 
