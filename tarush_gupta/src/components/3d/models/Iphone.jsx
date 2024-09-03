@@ -2,7 +2,6 @@ import { Clone, Html, useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { Vector3 } from 'three';
 import Icon from '../Icon';
-import { useControls } from "leva";
 import { useRef } from 'react';
 import AndroidScreen from '../../computer/AndroidScreen';
 

@@ -5,8 +5,7 @@ export default function Navbar({ setCameraIndex, cameraIndex }) {
         "home", "cup", "resume", "laptop", "mobile", "calendar", "trophy", "testimonial", "mail", "credits",
     ]
     let className = '';
-    if (cameraIndex===1) className = 'active'
-    else if (cameraIndex===0) className = 'deactive'
+    if (cameraIndex===0) className = 'deactive'
 
     
     return <nav className={className}>
