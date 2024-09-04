@@ -44,10 +44,15 @@ To explore the project locally:
 ## Screenshots
 
 ### Home Page
+![Home Page](https://github.com/TarushGupta23/storage/blob/main/Potfolio_3js/a.png)
+
+### Hero Section
+![Hero Page](https://github.com/TarushGupta23/storage/blob/main/Potfolio_3js/b.png)
 
 ### Projects Section
+![Web Projects](https://github.com/TarushGupta23/storage/blob/main/Potfolio_3js/c.png)
 
-### About Me
+![Android Projects](https://github.com/TarushGupta23/storage/blob/main/Potfolio_3js/d.png)
 
 ## Hidden Features
 
