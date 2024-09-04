@@ -85,9 +85,9 @@ const consoleMsg = `
 const webProjects = [
     // { liId: '', name: '', repoLink: '', tech: [], liveLink: '', desc: '', imgs: 0},
     { liId: 'atlas-game' , name: 'Atlas Game', repoLink: 'https://github.com/TarushGupta23/ATLAS_GAME', tech: ['react', 'socketio', 'pgsql'], liveLink: 'https://atlas-game.vercel.app', desc: 'An interactive web app built with React and Socket.IO, featuring a custom Express server and API, both developed by me, and a PostgreSQL database for efficient data management.', imgs: 3 },
+    { liId: 'library-proj', name: 'Library Management system', repoLink: 'https://github.com/TarushGupta23/nitj_library/', tech: ['react', 'php'], liveLink: '', desc: 'A web application designed to enhance the management and accessibility of library resources. Created under the guidance of college staff, it ensures efficient management of library resources.', imgs: 3 },
     { liId: 'parking-mngmnt-sys' , name: 'Parking Management system', repoLink: 'https://github.com/TarushGupta23/Parking-Management-System', tech: ['php', 'css'], liveLink: '', desc: 'A comprehensive database management system for efficient and organized parking management. The system is built using HTML, CSS, JavaScript, and PHP, providing a user-friendly interface.', imgs: 3 },
-    { liId: 'iota-website' , name: 'Iota Website', repoLink: 'https://github.com/SdSingh10/iota_official_website', tech: ['css'], liveLink: '', desc: 'Official Website of Iota Club (media cell - NITJ). This club empowers students through inclusive, innovative learning. Focused on leadership and interdisciplinary studies', imgs: 1 },
-    { liId: 'library-proj', name: 'Library Management system', repoLink: 'https://github.com/TarushGupta23/LibraryBookStore', tech: ['php', 'css'], liveLink: '', desc: 'A web application designed to enhance the management and accessibility of library resources. Created under the guidance of college staff, it ensures efficient management of library resources.', imgs: 2},
+    // { liId: 'iota-website' , name: 'Iota Website', repoLink: 'https://github.com/SdSingh10/iota_official_website', tech: ['css'], liveLink: '', desc: 'Official Website of Iota Club (media cell - NITJ). This club empowers students through inclusive, innovative learning. Focused on leadership and interdisciplinary studies', imgs: 1 },
 ]
 const androidProjects = [
     // { liId: '', name: '', repoLink: '', tech: [], liveLink: '', desc: '', imgs: 0},
@@ -107,7 +107,7 @@ const events = [
         <div>I have completed several online courses to enhance my technical skills, including <span>Data Structures and Algorithms in Java</span> from the Alpha Course by Apna College, <span>Android Development</span> from Oak Academy on Udemy, <span>MERN Development</span> from a Udemy course by Dr. Angela Yu, and <span>Three.js</span> from the ThreeJs Journey by Bruno Simon.</div>
     }, { start: 'Oct 2023', end: 'Till Date', img: 'gdsc', title: 'Android Team Member : GDSC', content: 
         <div>As a member of the <span>Android Development team in the GDSC club</span> at my college, I have enhanced my technical skills and collaboration abilities. This role has allowed me to work on innovative projects, stay updated with the latest Android advancements, and contribute to a vibrant tech community, fostering my growth as a proficient and dynamic developer.</div>
-    }, { start: 'Nov 2023', end: 'Till Date', img: 'nitj', title: 'Android Team Head : IOTA', content: 
+    }, { start: 'Nov 2023', end: 'Till Date', img: 'iota', title: 'Android Team Head : IOTA', content: 
         <div>I am the <span>lead of the Android Development team</span> and a <span>core member of the Web Development team in IOTA</span>, the media cell of my college. This dual role has allowed me to refine my leadership and technical skills, work on diverse projects, and contribute significantly to both Android and web development initiatives, fostering a comprehensive growth in my abilities as a developer.</div>
     },
 ]

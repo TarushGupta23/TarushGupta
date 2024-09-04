@@ -3,7 +3,7 @@ import { DoubleSide, SRGBColorSpace } from 'three';
 
 export default function Table() {
     const model = useGLTF('./models/Table.glb');
-    const [floorAlpha, carpetAlpha, floor, carpet] = useTexture(['./textures/floorAlpha.jpg', './textures/carpetAlpha.jpg', './textures/H2.png', './textures/mat3.jpg']);
+    const [floorAlpha, carpetAlpha, floor, carpet] = useTexture(['./textures/floorAlpha.jpg', './textures/carpetAlpha.jpg', './textures/floor.png', './textures/carpet.jpg']);
     floor.colorSpace = SRGBColorSpace
     carpet.colorSpace = SRGBColorSpace
 
