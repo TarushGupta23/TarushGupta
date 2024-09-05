@@ -25,7 +25,6 @@
     background: linear-gradient(140deg, #3a3f49, var(--secondary),  #191c21);
     border-radius: 12px;
     cursor: pointer;
-    /* opacity: .6; */
 }
 .resumeContainer .btn.navigation { 
     height: 2rem; width: 2rem;

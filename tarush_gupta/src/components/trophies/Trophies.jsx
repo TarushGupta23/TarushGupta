@@ -2,7 +2,6 @@ import { achievements } from '../../data'
 import './trophies.css'
 
 export default function Trophies({ idx }) {
-    // return <div className="trophiesContainer">
     return <div className={idx===6? "trophiesContainer" : "trophiesContainer hidden"}>
         <h2 className="title"> Achievements and <br />Positions of Responsibility </h2>
         <div className="trophiesWrapper">

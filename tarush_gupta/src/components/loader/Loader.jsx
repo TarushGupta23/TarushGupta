@@ -15,7 +15,6 @@ export default function Loader({ progress }) {
                 <img src="/icons/skills/kotlin.png" alt="kotlin-icon" />
             </div>
             <div className="loadingBar">
-                {/* <div className="loadingBarInner" style={{ width: `${progress}%` }}></div> */}
                 <div className="loadingBarInner" style={{ width: `${progress}%` }}></div>
             </div>
             <h2 className="loadingText">
