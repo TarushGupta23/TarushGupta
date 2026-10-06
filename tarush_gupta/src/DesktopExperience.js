@@ -98,7 +98,7 @@ function DesktopExperience() {
     return <>
         <Navbar setCameraIndex={setCameraIndex} cameraIndex={cameraIndex} />
 
-        <Canvas flat gl={{antialias: false}}>
+        <Canvas flat dpr={[1, 1.5]} gl={{ antialias: false, powerPreference: 'high-performance' }}>
             {/*<Perf position='top-left'/> */}
             <Camera cameraIndex={cameraIndex} />
         

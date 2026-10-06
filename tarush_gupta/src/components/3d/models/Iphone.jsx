@@ -39,4 +39,4 @@ export default function Iphone({idx, setIdx}) {
     </Clone>;
 }
 
-useGLTF.preload('./models/iPhone.glb');
+useGLTF.preload('./models/Iphone.glb');

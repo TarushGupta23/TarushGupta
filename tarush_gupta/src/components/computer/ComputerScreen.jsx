@@ -11,7 +11,7 @@ export default function ComputerScreen({ idx }) {
                         <ul className={`imgs-${project.liId} proj-img-ul`}>
                             {
                                 [...Array(project.imgs)].map((_, index) => {
-                                    return <img key={index} className='proj-img active' src={`./webProjects/${project.liId}/${index+1}.png`} alt="" id={index+1} />
+                                    return <img key={index} className='proj-img active' src={`./webProjects/${project.liId}/${index+1}.webp`} alt="" id={index+1} />
                                 })
                             }
                         </ul>
