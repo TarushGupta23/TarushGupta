@@ -8,7 +8,7 @@ export default function Trophies({ idx }) {
             <ul>
             {
                 achievements.map((item, index) => {
-                    return <li className='achievement-item'>
+                    return <li className='achievement-item' key={index}>
                         <span>{index+1}</span>
                         <h3>{item.title}</h3>
                         <p className='desc'>{item.desc}</p>

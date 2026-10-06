@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import './letter.css'
-import emailjs from '@emailjs/browser';
 
 export default function LetterHtml({idx}) {
     const form = useRef()
@@ -8,8 +7,9 @@ export default function LetterHtml({idx}) {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs
-            .sendForm('service_3v2t0b7', 'template_4fv0o6l', form.current, { publicKey: 'Hfeso__-f4gFcNp2-', })
+        // emailjs is only downloaded when someone actually sends a message
+        import('@emailjs/browser')
+            .then(({ default: emailjs }) => emailjs.sendForm('service_3v2t0b7', 'template_4fv0o6l', form.current, { publicKey: 'Hfeso__-f4gFcNp2-', }))
             .then(
                 () => { 
                     window.alert('Message sent successfully')
